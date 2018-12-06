@@ -1,0 +1,69 @@
+
+
+<div class="login-page">
+
+      <!-- Begin page -->
+      <div  class="container-fluid">
+
+
+
+          <!-- ============================================================== -->
+          <!-- Start Content here -->
+          <!-- ============================================================== -->
+
+          <div class="absolute-center">
+
+
+                  <div class="card-box form-signin">
+
+
+                          <h2 class="text-uppercase text-center pb-4">
+                              <a href="index.html" class="text-success">
+                                  <span><%=image_tag "cenzo-logo.png", alt: "Cenzo", width: "60%"%></span>
+                              </a>
+                          </h2>
+
+                          <h4>
+                            2-Factor Authentication
+                          </h4>
+
+                          <p>
+                          We’ve sent a code to the phone number ending in <strong><%=@usr_presenter.extract_mobile_digits%></strong>. Add it below to finish logging in.
+                          </p>
+
+
+                          <%= form_with url: submit_code_path, local: true do |form| %>
+                          <div class="form-group m-b-20 row">
+                            <div class="col-12">
+                              <%=form.label :verificationcode %>
+                              <%=form.text_field :verificationcode, class: "form-control", type: "number", maxlength: "6", placeholder: "Enter code"%>
+                            </div>
+                          </div>
+
+                          <%=form.submit "Log In", class: "btn btn-block btn-custom", type: "submit"%>
+                          <%end%>
+
+
+
+                  </div>
+                  <!-- /.card-box -->
+              <!-- ========== boilerplate========== -->
+                <%= render 'layouts/shared/boilerplate' %>
+
+              <!-- boilerplate End -->
+
+
+
+          </div>
+          <!-- END login-page -->
+
+          <!-- ============================================================== -->
+          <!-- End content here -->
+          <!-- ============================================================== -->
+
+
+      </div>
+      <!-- END wrapper -->
+
+
+  </div>

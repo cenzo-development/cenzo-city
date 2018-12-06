@@ -1,0 +1,70 @@
+<div class="login-page">
+
+      <!-- Begin page -->
+      <div  class="container-fluid">
+
+
+
+          <!-- ============================================================== -->
+          <!-- Start Content here -->
+          <!-- ============================================================== -->
+
+          <div class="absolute-center">
+
+
+              <div class="card-box form-signin">
+
+
+                      <h2 class="text-uppercase text-center pb-4">
+                          <a href="" class="text-success">
+                              <span><%=image_tag "cenzo-logo.png", alt: "Cenzo", width: "60%"%></span>
+                          </a>
+                      </h2>
+
+                      <h4>
+                        2-Factor Authentication
+                      </h4>
+
+                      <p>
+                      For added security and to verify you are the one logging in. You will need an SMS verification code to continue logging in to your account.
+                      </p>
+
+                      <p>We will be sending you a text message containing a 6 digit code to the phone number below.<br>
+                      <strong>(###) ### <%=@usr_presenter.extract_mobile_digits%></strong>
+                      </p>
+
+                      <p>
+                        <%=link_to "This is not my number", support_path%>
+                      </p>
+
+                      <%=link_to enter_code_path do%>
+                      <span><%=button_tag "Send Verification Code", class: "btn btn-block btn-custom"%></span>
+                      <%end%>
+
+              </div>
+              <!-- /.card-box -->
+
+
+              <!-- ========== boilerplate========== -->
+              <%= render 'layouts/shared/boilerplate' %>
+              <!-- boilerplate End -->
+
+
+
+          </div>
+          <!-- END login-page -->
+
+          <!-- ============================================================== -->
+          <!-- End content here -->
+          <!-- ============================================================== -->
+
+
+      </div>
+      <!-- END wrapper -->
+
+
+      <!-- ========== doc Footer ========== -->
+
+      <!-- doc Footer End -->
+
+  </div>

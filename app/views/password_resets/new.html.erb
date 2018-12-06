@@ -1,0 +1,51 @@
+
+
+<div class="login-page">
+
+        <!-- Begin page -->
+        <div  class="container-fluid">
+
+            <!-- ============================================================== -->
+            <!-- Start Content here -->
+            <!-- ============================================================== -->
+
+            <div class="absolute-center">
+
+
+                <div class="card-box form-signin">
+
+                        <h2 class="text-uppercase text-center pb-4">
+                          <span><%=image_tag "cenzo-logo.png", alt: "Cenzo", width: "60%"%></span>
+                        </h2>
+
+                        <h4>
+                            Reset Your Password
+                        </h4>
+
+                        <p>We’ll email you instructions to reset your password.  If you don’t have access to your email anymore, please contact <%=link_to "Cenzo support", support_path%>.</p>
+                        <%=form_with url: password_resets_path, local: true do |form|%>
+                        <div class="form-group m-b-20 row">
+                          <div class="col-12">
+                            <%=form.label :email%>
+                            <%=form. email_field :email, class: "form-control", id: :user_email, placeholder: "Enter your email"%>
+                          </div>
+                        </div>
+
+                            <div class="form-group row text-center m-t-10">
+                              <div class="col-12">
+                                <%=form.submit "Reset Password", class: "btn btn-block btn-custom waves-effect waves-light"%>
+                              </div>
+                            </div>
+                            <%end%>
+
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                              <%=link_to "Return to Log In", new_session_path, class: "text-dark m-l-5"%>
+                            </div>
+                        </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>

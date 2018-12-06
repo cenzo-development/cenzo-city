@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:3000"
+    depends_on:
+      - database
+    volumes:
+      - .:/usr/src/cenzo-city
+    env_file:
+      - .env/development/database
+      - .env/development/web
+      - .env/test/database
+      - .env/staging/database
+      - .env/production/database 
+
+  database:
+      image: mongo
+      env_file:
+        - .env/development/database
+        - .env/test/database
+        - .env/staging/database
+        - .env/production/database
+      volumes:
+        - db-data:/data/db
+
+
+volumes:
+  db-data:

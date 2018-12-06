@@ -1,0 +1,9 @@
+// https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
+#sidebar-menu .menu-arrow:before {
+
+  font-family: 'Material Icons';
+  content: "chevron_right";
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+}

@@ -1,0 +1,84 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cenzo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="" name="description" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- ========== doc Head ========== -->
+        <?php require 'partials/doc-head.html'; ?>
+        <!-- doc Head End -->
+
+    </head>
+
+    <body class="login-page">
+
+        <!-- Begin page -->
+        <div  class="container-fluid">
+
+            <!-- ============================================================== -->
+            <!-- Start Content here -->
+            <!-- ============================================================== -->
+
+            <div class="absolute-center">
+
+                <div class="card-box form-signin">
+                  <h2 class="text-uppercase text-center pb-4">
+                    <span><%= image_tag "cenzo.png", alt: "Cenzo", width: "60%" %></span>
+                  </h2>
+
+                  <%= form_with url: sessions_path do |form| %>
+                  <div class="form-group m-b-20 row">
+                      <div class="col-12">
+                        <%=form.label :email %>
+                        <%=form.email_field :email, id: :user_email, class: "form-control", placeholder: "Enter your email"%>
+                      </div>
+                  </div>
+
+                  <div class="form-group row m-b-20">
+                      <div class="col-12">
+                        <%=link_to(class: "text-muted pull-right") do%>
+                        <small>Forgot your password?</small>
+                        <%end%>
+                        <%=form.label :password%>
+                        <%=form.email_field :password, id: :user_password, class: "form-control", placeholder: "Enter your email"%>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group row text-center m-t-10">
+                      <div class="col-12">
+                          <button class="btn btn-block btn-custom waves-effect waves-light" type="submit">Log In</button>
+                      </div>
+                  </div>
+                  <%end%>
+
+              <div class="row m-t-50">
+                  <div class="col-sm-12 text-center">
+                      <p class="text-muted">Don't have an account? <a href="register.html" class="text-dark m-l-5"><b>Register</b></a></p>
+                  </div>
+              </div>
+
+            </div>
+
+              <%= render 'shared/boilerplate' %>
+
+            </div>
+            <!-- END login-page -->
+
+            <!-- ============================================================== -->
+            <!-- End content here -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- ========== doc Footer ========== -->
+        <?php require 'partials/doc-footer.html';?>
+        <!-- doc Footer End -->
+
+    </body>
+</html>

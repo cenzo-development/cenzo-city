@@ -1,0 +1,69 @@
+
+/*
+Template Name: Cenzo Admin
+Author: Jacob Lett
+Email: jacoblett@bootstrapcreative.com
+File: Main Css File
+Notes: A modifed version of HighAdmin template
+*/
+
+/*
+- Bootstrap 4
+- High Admin
+- Cenzo Application styles
+*/
+
+// Bootstrap 4 SCSS
+//@import "../bootstrap/scss/bootstrap";
+
+//@import "highadmin";
+@import "highadmin-variables";
+@import "highadmin/metismenu";
+@import "highadmin/menu";
+@import "highadmin/common";
+@import "highadmin/helper";
+@import "highadmin/bootstrap-reset";
+@import "highadmin/waves";
+@import "highadmin/card";
+@import "highadmin/buttons";
+@import "highadmin/ribbons";
+@import "highadmin/popover-tooltips";
+@import "highadmin/checkbox-radio";
+@import "highadmin/alerts";
+@import "highadmin/modal";
+@import "highadmin/spinners";
+@import "highadmin/widgets";
+@import "highadmin/tabs";
+@import "highadmin/progress";
+@import "highadmin/sweet-alert";
+@import "highadmin/charts";
+@import "highadmin/email";
+@import "highadmin/form-elements";
+@import "highadmin/form-advanced";
+@import "highadmin/form-validation";
+@import "highadmin/form-pickers";
+@import "highadmin/form-wizard";
+@import "highadmin/summernote";
+@import "highadmin/wysiwig";
+@import "highadmin/form-uploads";
+@import "highadmin/tables";
+@import "highadmin/maps";
+@import "highadmin/calendar";
+@import "highadmin/tickets";
+@import "highadmin/taskboard";
+@import "highadmin/projects";
+@import "highadmin/companies";
+@import "highadmin/file-manager";
+@import "highadmin/timeline";
+@import "highadmin/profile";
+@import "highadmin/print";
+@import "highadmin/faq";
+@import "highadmin/pricing";
+@import "highadmin/account-pages";
+@import "highadmin/search-results";
+@import "highadmin/gallery";
+@import "highadmin/coming-soon";
+@import "highadmin/responsive";
+
+// Cenzo application styles
+@import "cenzo/login";

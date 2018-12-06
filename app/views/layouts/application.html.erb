@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cenzocity</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= render 'layouts/doc-head' %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% non_layout_paths = %w(/sessions/new /passcode/confirm /passcode/enter /support /register /password_resets/new /password_resets)%>
+    <% unless non_layout_paths.include?(request.path) %>
+    <%= render 'layouts/top-bar' %>
+    <%= render 'layouts/left-sidebar' %>
+    <% end %>
+
+    <div class="flash-container" >
+      <% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>" style="text-align:center"><%= value %></div>
+      <%end%>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

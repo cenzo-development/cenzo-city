@@ -1,0 +1,74 @@
+<div class="login-page">
+
+        <!-- Begin page -->
+        <div  class="container-fluid">
+
+
+            <!-- ============================================================== -->
+            <!-- Start Content here -->
+            <!-- ============================================================== -->
+
+            <div class="absolute-center">
+
+
+                <div class="card-box form-signin">
+
+                        <h2 class="text-uppercase text-center pb-4">
+                            <span><%=image_tag "cenzo-logo.png", alt: "Cenzo", width: "60%"%></span>
+                        </h2>
+
+                        <h4>
+                          Choose New Password
+                        </h4>
+                        <p>
+                          Please enter a new password that is at least 6 characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like !”?$&%).
+                        </p>
+
+                        <%=form_with url: password_reset_path, model: @password_edit, local: true do |form|%>
+                        <% if @password_edit.errors.any?%>
+                        <%= render "layouts/shared/error-message"%>
+                        <%end%>
+
+                        <div class="form-group m-b-20 row">
+                          <div class="col-12">
+                            <%=form.label :password%>
+                            <%=form.password_field :password, class: "form-control", id: "password", placeholder: "Enter Password"%>
+                          </div>
+                        </div>
+
+                        <div class="form-group m-b-20 row">
+                          <div class="col-12">
+                            <%=form.label :password_confirmation%>
+                            <%=form.password_field :password_confirmation, class: "form-control", id: "password2", placeholder: "Re-enter Password"%>
+                          </div>
+                        </div>
+
+                        <div class="form-group row text-center m-t-10">
+                          <div class="col-12">
+                            <%=form.submit "Change Password", class: "btn btn-block btn-custom waves-effect waves-light"%>
+                          </div>
+                        </div>
+
+
+                </div>
+
+
+                <!-- ========== boilerplate========== -->
+                <%= render 'layouts/shared/boilerplate'%>
+                <!-- boilerplate End -->
+            </div>
+            <!-- END login-page -->
+
+            <!-- ============================================================== -->
+            <!-- End content here -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- ========== doc Footer ========== -->
+        <!-- doc Footer End -->
+
+    </div>

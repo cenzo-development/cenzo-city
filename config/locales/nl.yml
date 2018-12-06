@@ -1,0 +1,2632 @@
+
+nl:
+  client: "cliënt"
+  hybrid: "hybride"
+  insured: "verzekerd"
+  private: "privaat"
+  title: "Cenzo, centraal netwerk psychologische zorg"
+  date:
+    formats: &date_formats
+      default: "%d-%m-%Y"
+      short: "%d-%m-%Y"
+      long: "%B %d, %Y"
+      ei: "%Y%m%d"
+      comment: "%-d-%-m-%Y, %H:%M"
+  time:
+    formats:
+      <<: *date_formats
+  pronoun:
+    subject:
+      sir: "hij"
+      madam: "zij"
+      unknown: "hij/zij"
+    object:
+      sir: "hem"
+      madam: "haar"
+      unknown: "hem/haar"
+
+  application:
+    reset_letter: 'Reset'
+    menu:
+      clients: "Cliënten"
+      invoices: "Facturen"
+      manage/contracts: "Afspraken templates"
+      manage/employees: "Medewerkers"
+      manage/psychologists: "Psychologen"
+      project_admin/ei_declarations: "Vecozo"
+      project_admin/organisations: "Organisaties"
+      psych/declarations: "Financieel"
+      psych/organisations: "Organisaties"
+      treatments: "Behandelingen"
+      logs: "Log"
+      kofs: "Mgmt Info"
+      motds: "Mededelingen"
+      financial_data_index: "Financiële stamgegevens"
+
+
+    re_cov: "COV"
+    new_treatment: "Nieuw behandeltraject"
+    new_regular_treatment: "Nieuw regulier traject"
+    new_company_care_treatment: "Nieuw bedrijfszorgtraject"
+    export: 'Exporteren'
+    ok: "OK"
+    cancel: "Annuleren"
+    close: "x"
+    save: "Opslaan"
+    save_and_resync: "Opslaan en hersynchroniseren"
+    save_and_generate_new_password: "Wachtwoord sturen"
+    send_new_pass_code: "SMS-authenticatiecode sturen"
+    download: "Downloaden"
+    update: "Bijwerken"
+    add: "Toevoegen"
+    home: "home"
+    title: "Cenzo"
+    logout: "uitloggen"
+    search: "Zoek"
+    send: "Verzenden"
+    perform: "Uitvoeren"
+    approve: "Akkoord"
+    fill_in: "Invullen"
+    view: "Inzien"
+    search_client: "Cliënt zoeken"
+    edit: "Bewerken"
+    correct: "Corrigeren"
+    edit_client: "Cliënt bewerken"
+    show: "Bekijken"
+    create_pdf: "Maak een PDF"
+    attach_pdf: "Document aan dossier toevoegen"
+    pdf_with_letterhead: "PDF per e-mail"
+    pdf_without_letterhead: "PDF per brief"
+    change: "Wijzigen"
+    new: "Nieuw"
+    all: "Alle"
+    back: "Terug naar het overzicht"
+    select: "Selecteren"
+    select_placeholder: "Selecteer..."
+    no_results: "Geen resultaten voor "
+    are_you_sure: "Weet u het zeker?"
+    manage: "Beheer"
+    not_applicable: "Niet van toepassing"
+    'yes': "Ja"
+    'no': "Nee"
+    'true': "Ja"
+    'false': "Nee"
+    delete: "Verwijder"
+    distance_in_km: "%{distance}km"
+    error: "Let op!"
+    no_permission: "Je hebt geen rechten om deze pagina te bekijken, neem contact op met de projectadministratie als je denkt dat dit onterecht is."
+    request: "Aanvragen"
+    average: "gemiddeld"
+    high: "hoog"
+    very_high: "zeer hoog"
+    sir: "heer"
+    sir_2: "de heer"
+    sir_3: "dhr."
+    madam: "mevrouw"
+    madam_2: "mevrouw"
+    madam_3: "mevr."
+    unknown: "heer/mevrouw"
+    unknown_2: "de heer/mevrouw"
+    unknown_3: "dhr./mevr."
+    unknown_3_capitalized: "Dhr./Mevr."
+    debit: "debet"
+    credit: "credit"
+    send_to_insurer_or_company: "Te verzenden naar werkgever"
+    sent_to_insurer_or_company: "Verzonden naar werkgever"
+
+    errors:
+      incompatible_insurers_error: "Aanvullende verzekering van %{client} moet in dit geval van dezelfde verzekeraar zijn als de basisverzekering."
+      no_financial_data_error: "Verzekeraar %{insurer} met id %{id} heeft geen financiële data voor %{year}"
+      no_performance_code_amount_error: "Prestatiecode %{code} van verzekeraar %{insurer} heeft geen bedrag"
+      no_performance_code_weight_error: "Prestatiecode %{code} van verzekeraar %{insurer} heeft geen gewicht"
+      template_not_found_error: "Afsprakentemplate '%{template}' niet gevonden"
+      psychologist_rate_not_found_error: "Voor behandeling %{treatment} is geen psycholoogtarief gespecificeerd; neem contact op met Cenzo."
+      cannot_reset_invoiced_error: "Een reeds gefactureerde sessie kan niet meer gereset worden."
+      dummy_insurer_not_found_error: "De dummy-verzekeraar kan niet gevonden worden"
+      invalid_deduplication_error: "Polis '%{insurance_policy}' van %{insurer} ondersteunt alleen ontdubbeling van het gecontracteerde tarief"
+      vecozo_timeout_error: "CenzoCity kon geen verbinding maken met Vecozo"
+      error_wrapper: "Behandeling %{treatment} veroorzaakte de volgende fout: %{message}"
+
+  home:
+    index:
+      dashboard: "Dashboard"
+    psychologist:
+      administration: "Administratie"
+      days_off: "Afwezigheid"
+      nothing_planned: "Er zijn op deze dag geen sessies ingepland"
+      nothing_todo: "Je bent bij met je administratieve taken!"
+      scheduled_sessions: "Ingeplande sessies voor %{date}"
+      go_to_date: "Ga naar datum"
+      execute: "uitvoeren"
+      report: "rapporteren"
+
+  views:
+    pagination:
+      previous: "&lt;"
+      next: "&gt;"
+      truncate: "..."
+      first: "Eerste"
+      last: "Laatste"
+
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nee'
+    edit:
+      edit_report: "Bewerk rapportage"
+    labels:
+      attachment:
+        file: "Bestand"
+      treatment_action: &action
+        completed_at: "op datum"
+        performance_code: "prestatiecode"
+        no_show_percentage: "no-show percentage"
+        executed_at: "op datum"
+        notes: "opmerkingen"
+        sessions_amount: "totaal aantal sessies"
+      treatment_action_bz: &action_bz
+        general_practitioner_calls_client: "ik adviseer u de cliënt door de bedrijfsarts op te laten roepen"
+        work_resumation_conversation: "ik adviseer u een gesprek in te plannen met cliënt om de werkhervatting te bespreken"
+        contact: "ik zal contact met u proberen op te nemen om één en ander toe te lichten"
+        three_way_conversation: "ik adviseer u een driegesprek in te plannen"
+        advise_explanation: "toelichting"
+        contact_at: "ik zal proberen contact op te nemen op"
+        contactable_at: "zelf te bereiken op"
+        notes: "opmerkingen"
+        intake_date: "datum intake "
+        recovery_barrier: "belemmeringen en/of in standhoudende factoren m.b.t. herstel"
+        recovery_barrier_explanation: "toelichting"
+        burden_explanation: "Mogelijkheden/Adviezen ten aanzien van de werkhervatting of voorkoming van verzuim"
+        conclusion: "conclusie"
+      treatment_actions_intake:
+        <<: *action
+      treatment_actions_initial_contact:
+        <<: *action
+        first_name: "voornaam"
+        mid_name: "voorvoegsel"
+        last_name: "achternaam"
+        email: "email"
+      treatment_actions_intake:
+        <<: *action
+
+      treatment_actions_session:
+        <<: *action
+
+      treatment_actions_regression_prevention:
+        <<: *action
+
+      treatment_actions_report: &report
+        expected_end_date: "verwachte einddatum "
+        probalility_of_absence: "dreigend verzuim "
+        weekly_working_hours: "contracturen per week"
+        weekly_available_hours: "hoeveel uren per week werkt client bij aanvang intake"
+        absenteeism: "verzuim bij aanvang van de intake "
+        work_resumation_is_part_of_treatment: "werkhervatting is"
+        work_resumation_is_part_of_treatment_explanation: "omdat"
+        burden_estimate: "client kan belast worden?"
+        burden_type: "inschatting belastbaarheid cliënt bij het hervatten van het werk"
+        burden_approach: "gewenste benadering bij het hervatten van het werk"
+        work_resumation_indication: "kun u een inschatting maken m.b.t werkhervatting cliënt?"
+        work_resumation_duration: "inschatting aantal weken voordat cliënt volledig de werkzaamheden kan hervatten"
+        work_resumation_optimalisation: "advies t.a.v. optimalisering werkhervatting"
+        work_up_resumation_duration: >
+          inschatting aantal weken na intake waarna gestart kan worden met de opbouw/hervatten van de werkzaamheden
+          (bij een normaal verloop van de behandeling)
+      treatment_actions_intake_report:
+        <<: *action
+        <<: *action_bz
+        <<: *report
+        access_time_met: "Toegangstijd gehaald (aantal werkdagen tussen aanmelddatum en datum eerste intakegesprek) "
+        access_time_not_met_explanation: "Reden toegangstijd niet gehaald"
+        problem_description: "klachtomschrijving"
+        question_lists: "resultaten onderzoeken en vragenlijsten"
+        problem_conclusion: "conclusie(s)"
+        target_description: "doelstelling zorgverlening"
+        treatment_proposal: "behandelvoorstel"
+        follow_up_treatment: "vervolgbehandeling na intake "
+        no_treatment_reason: "reden geen vervolg "
+        referred_to_doctor_reason: "terugverwezen naar arts omdat "
+        standard_history: "standaard anamnese"
+        intended_therapies: "beoogde toe te passen therapie(en)"
+        intended_therapies_explanation: "toelichting beoogde therapie(en)"
+        sessions_amount: "geschat aantal sessies (inclusief intake)"
+        treatment_type: "Type zorg"
+        initiated_treatment: "geïnitieerd traject"
+      treatment_actions_intake_report_vgz_iza:
+        absent_at_intake: "verzuimend bij Intake"
+        threatening_non_attendance: "is er sprake van dreigend verzuim"
+        access_times_not_met: "indien toegangstijd niet gehaald, reden"
+        access_times_not_met_explanation: "anders"
+        no_show: "no show tijdens Intake"
+        number_of_no_shows: "aantal no shows"
+        privacy_form_approved_by_employee: "privacy formulier door werknemer geaccodeerd"
+        complaint_description: "klachtomschrijving"
+        hindrance_in_execution_of_work: "belemmering uitvoering van werk"
+        hindrance_in_execution_of_work_explanation: "indien belemmering welke"
+        work_related_advice: "werkgerelateerde adviezen"
+        intervention_goal: "doelstelling interventie"
+        absence_solutions: >
+          wat heeft de werknemer nodig om de verzuimoorzaken weg te nemen en wat is de eventuele
+          functionele belemmering, om te reïntegreren in het arbeidsproces?
+        contracts: "afspraken (werknemer, zorgverlener,  werkgever en arbodienst)"
+        continue_treatment: "vervolg na intake"
+        refer_back: "indien geen vervolg na intake; terugverwezen naar bedrijfsarts/casemanager"
+        refer_to_next_counselor: "doorverwezen naar volgende soort hulpverlener"
+        treatment_proposal: "behandelvoorstel (t.a.v.) keuze interventie, reintegratie, functieherstel, omgang met klachten)"
+      treatment_actions_time_schedule_report:
+        <<: *action_bz
+        <<: *action
+        <<: *report
+        intake_report_send: "intakerapportage verzonden aan de bedrijfsarts"
+        intake_report_send_reason: "reden"
+        follow_up_treatment: "vervolgbehandeling na intake "
+        no_treatment_reason: "reden geen vervolg "
+        absenteeism_reason: "reden"
+        sessions_amount: "geschat aantal sessies (inclusief intake) "
+        initiated_treatment: "geïnitieerd traject"
+
+      treatment_actions_time_schedule_report_vgz_iza:
+        <<: *action
+        <<: *report
+        permission: "cliënt gaat akkoord met het verstrekken van (medisch inhoudelijke) gegevens aan de arts."
+        absenteeism: "cliënt verzuimt bij aanvang intake"
+        absenteeism_reason: "reden"
+        treatment_goal: "doelstelling van de behandeling"
+        treatment_goal_reason: "omdat"
+        estimate_possible: "kunt u een inschattingmaken m.b.t. belastbaarheid van de cliënt"
+        normale_course_estimate: "bij een normaal verloop van de behandeling is mijn inschatting dat cliënt vanaf xx we(e)k(en) na de intake kan starten met het opbouwen/hervatten van haar werkzaamheden."
+        expected_back_at_work_time: "ik verwacht dat cliënt na ongeveer xx we(e)k(en) weer volledig aan het werk zou kunnen."
+        taxability_estimate: "bij hervatting/opbouw van het werk is mijn inschatting dat cliënt xxx  belast kan worden "
+        approach_needed: "en dat cliënt een xxx benadering nodig heeft."
+        advise: "advies"
+        general_practitioner_calls_client: "ik adviseer u de cliënt door de bedrijfsarts op te laten roepen"
+        work_resumation_conversation: "ik adviseer u een gesprek in te plannen met cliënt om de werkhervatting te bespreken"
+        contact: "ik zal contact met u proberen op te nemen om één en ander toe te lichten"
+        three_way_conversation: "ik adviseer u een driegesprek in te plannen"
+        contact_at: "ik zal proberen contact op te nemen op"
+        contactable_at: "zelf te bereiken op"
+      treatment_actions_final_report:
+        <<: *action_bz
+        <<: *action
+        <<: *report
+        estimated_remaining_sessions: "aantal gegeven sessies (incl. intake) "
+        finished_at: "datum afronding behandeling "
+        first_session_after_intake: "datum eerste behandeling na intake "
+        successful: "einde behandeling "
+        reason_for_termination: "voortijdig beëindigd door "
+        treatment_goal: "de behandeldoelstelling"
+        after_completion: "medewerker heeft na afronding van de behandeling "
+        result_explanation: "toelichting"
+        DSM4_classification: "de DSM-IV-TR AS 1 classificatie, zoals gesteld bij de intake, blijkt achteraf juist/anders te zijn"
+        continued_work: "Cliënt heeft het werk bij afronding van de behandeling"
+        recovery_barrier: "belemmeringen bij het hervatten van het werk"
+        resumes_at: "na afronding van de behandeling is de verwachting dat cliënt het werk verder hervat in"
+        delivered_treatment: "geleverde prestatie"
+        dsm_iv_changed: "de DSM classificatie, zoals gesteld bij de intake is"
+        effect: "Aantal weken dat door de inzet van de behandeling aan verzuim is voorkomen"
+      treatment_actions_final_report_vgz_iza:
+        absent_at_intake: "verzuimend bij afsluiting"
+        threatening_non_attendance: "is er sprake van dreigend verzuim"
+        no_show: "no show tijdens behandeling"
+        number_of_no_shows: "aantal no shows"
+        estimation_sickness_absence: "inschatting ziekte verzuim zonder interventie X week/weken"
+        treatment_prematurely_ended: "behandeling voortijdig beëindigd"
+        treatment_prematurely_ended_by: "voortijdig beëindigd door"
+        treatment_prematurely_ended_by_other: "nl"
+        treatment_prematurely_ended_by_reason: "anders"
+        probalility_of_absence: "dreigend verzuim"
+        weekly_working_hours: "contracturen per week"
+        weekly_available_hours: "hoeveel uren werkt client bij afronding van de behandeling"
+        target_intervention_achieved: "gestelde doelstelling interventie gehaald"
+        target_intervention_achieved_reason: "reden"
+        hindrance_in_execution_of_work: "belemmering uitvoering van werk"
+        hindrance_in_execution_of_work_explanation: "indien belemmering welke"
+        contracts: "afspraken (werknemer, zorgverlener,  werkgever en arbodienst)"
+        achieved_intervention_result: "bereikt resultaat interventie"
+        comments: "opmerkingen"
+      treatment_actions_progress_report:
+        <<: *action_bz
+        <<: *action
+        <<: *report
+        completed_sessions: "verricht aantal sessies"
+        estimated_remaining_sessions: "geschat resterend aantal sessies"
+        progress_since_intake: "sinds de intake is er sprake van "
+        progress_since_intake_explanation: "toelichting"
+        treatment_objective: "de bij de intake gestelde behandeldoelstelling "
+        treatment_objective_explanation: "de behandeldoelstelling luidt nu als volgt"
+        continued_work: "cliënt heeft het werk sinds de intake"
+        recovery_barrier: "belemmeringen bij het hervatten van het werk"
+        burden_explanation: "mogelijkheden/adviezen ten aanzien van de werkhervatting"
+      treatment_actions_periodical_report:
+        progress: 'er is sprake van'
+        progress_explanation: 'omdat'
+        target_achieved: 'de verwachting is dat de doelstelling gehaald wordt'
+        target_explanation: 'omdat'
+        remaining_sessions_required: 'nog benodigde sessies'
+        absenteeism: 'verzuim'
+        reintegration_state: 'herintegratiestatus'
+        reintegration_date: 'herintegratiedatum'
+        absenteeism_state: 'verzuim tijdens de behandeling'
+        reintegration_expectation: 'mogelijkheid m.b.t. verdere werkhervatting'
+        reintegration_expectation_explanation: 'omdat'
+        reintegration_position: 'herintegratiefunctie'
+        advice: 'mogelijkheden/adviezen ten aanzien van de werkhervatting'
+        comments: 'opmerkingen'
+      treatment_actions_general_practitioner_report:
+        practice_name: "Naam praktijk"
+        name: "Naam huisarts"
+        address: "Adres"
+        zipcode: "Postcode"
+        city: "Woonplaats"
+        complaint_description: "Klachtomschrijving"
+        conclusion: "Conclusie"
+        anxiety: "Angst"
+        agoraphobia: "Agorafobie"
+        depression: "Depressie"
+        somatic_complaints: "Somatische klachten"
+        insufficiency_in_thinking: "Insufficiëntie in denken/handelen"
+        distrust: "Wantrouwen/ Interpersoonlijke Sensitiviteit"
+        hostility: "Hostiliteit"
+        sleep_problems: "Slaapproblemen"
+        psycho_neuroticism_score: "Haar/Zijn Psychoneuroticisme score is daarmee"
+        treatment_proposal: "Behandelvoorstel"
+        goal: "Doelstelling van de behandeling"
+      treatment_actions_permission: &treatment_actions_permission
+        dsm_iv: "toestemming vastleggen DSM classificatie"
+      treatment_actions_permission_bz: &treatment_actions_permission_bz
+        <<: *treatment_actions_permission
+        report_to_general_practitioner: "bedrijfsarts"
+        report_to_insurance_doctor: "verzekeringsarts "
+        report_to_medical_advisor: "medisch adviseur"
+        info_to_general_practitioner: "bedrijfsarts"
+        info_to_insurance_doctor: "verzekeringsarts "
+        info_to_medical_advisor: "medisch adviseur"
+        employer: "werkgever"
+        case_manager: "casemanager/ verzuimadviseur ea"
+        insurer: "zorgverzekeraar"
+      treatment_actions_permission_bz_vgz_iza:
+        <<: *treatment_actions_permission_bz
+        info_to_vgz_iza: "toestemming met medisch inhoudelijke rapportage naar VGZ-IZA"
+      treatment:
+        received_at: "Ontvangen op"
+        received_by: "Ontvangen via"
+        product_id: "Zorgproduct"
+        referring_contact_id: "Doorverwijzer"
+        requesting_contact_id: "Aanvrager"
+        requested_by_client: "Cliënt is de aanvrager"
+        reffered_by_general_practitioner: "Huisarts is de doorverwijzer"
+        dbc_based_el: "Regulier"
+
+        online_submitter_id: "Aangemeld door"
+        processer_id: "Medewerker"
+        employer_id: "Werkgever"
+        attachment: "Bestand"
+        invoice_info_unknown: "factuurinformatie is niet bekend"
+        comment: "Notitie"
+
+        vecozo_address: &address
+          address: "straat"
+          house_number: "nr."
+          house_number_extension: "toev."
+          city: "plaats"
+          country: "land"
+          zipcode: "postcode"
+          building_name: "gebouw"
+        billing_address:
+          <<: *address
+
+        one_time_billing_address:
+          <<: *address
+
+        treatment_address:
+          <<: *address
+
+      person: &person
+        email: "e-mailadres"
+        password: "wachtwoord"
+        password_confirmation: "wachtwoord confirmatie"
+        pass_code: "sms authenticatie"
+
+        salutation: "aanhef"
+        title: "titel"
+        initials: "initialen"
+        first_name: "voornaam"
+        mid_name: "tussenvoegsels"
+        last_name: "achternaam"
+        agb_code: "AGB-code"
+        anonymous: "anoniem"
+
+        birth_date: "geboortedatum"
+
+        work_phone: "telefoon werk"
+        private_phone: "telefoon privé"
+        alternative_email: "alternatief e-mailadres"
+
+      client:
+        <<: *person
+        number: "nummer"
+        bsn: "BSN"
+      contact: &contact_and_person
+        <<: *person
+        function: "functiecategorie"
+        function_name: "functienaam"
+        roles: "rollen"
+        department: "afdeling"
+        phone: "telefoon direct"
+        active: "actief"
+        pass_code_required: "SMS authenticatie vereist"
+        static_pass_code: "Geen SMS maar vaste code"
+      employee:
+        <<: *contact_and_person
+        manager: "beheerder"
+        book_keeper: "boekhouder"
+
+      psychologist:
+        <<: *person
+        practice_name: "praktijknaam"
+        agb_code: "AGB code"
+        agb_code_of_practice_trainer: "AGB code praktijkopleider"
+        big_number: "Big nummer"
+        iban: "IBAN rekening"
+        kvk_number: "KVK nummer"
+        creditor_number: "crediteurnummer"
+        number: "Cenzo ID nummer"
+        first_line_via_cenzo: "Regulier via Cenzo"
+        nip_membership_number: "Nip lidmaatschapnummer"
+        is_ag: "AG"
+        is_gz: "GZ"
+        auto_invoice_all: "Alle trajecten"
+        auto_invoice_el: "Alleen reguliere trajecten"
+        active: "actief"
+        exited: "Uitgestapt"
+        push_sms_messages: "SMS notificaties"
+        pass_code_required: "SMS authenticatie vereist"
+        static_pass_code: "Geen SMS maar vaste code"
+        is_marshal: "Is regiocoordinator"
+        mailing_address:
+          <<: *address
+        private_address:
+          <<: *address
+      treatment_location:
+        address:
+          <<: *address
+      organisation:
+        parent_id: "hoofdbedrijf"
+        contract_organisation_id: "contractorganisatie"
+        is_contract_organisation: "contractorganisatie"
+        invoice_type: "bestemming"
+        invoice_contact_id: "contactpersoon"
+        department: "afdeling"
+        copy_mailing_address: "kopieër van postadres"
+        name: "naam"
+        level: "organisatieniveau"
+        employer_name_on_invoice: "Naam werkgever op factuur"
+        extra_description_for_invoice: "Vrije omschrijving"
+        kvk_number: "KvK-nummer"
+        btw_number: "BTW-nummer"
+        uzovi_number: "Uzovi-nummer"
+        invoice_uzovi_number: "facturatie Uzovi"
+        phone: "telefoonnummer"
+        fax: "faxnummer"
+        email: "e-mailadres"
+        invoice_reference: "referentie"
+        debtor_number: "debiteurnr."
+        creditor_number: "crediteurnr."
+        inactive: "non-actief"
+        email_for_invoicing: "e-mailadres factuur"
+        arbo_organisation_relation: "intern/extern"
+        mailing_address:
+          <<: *address
+        visiting_address:
+          <<: *address
+        billing_address:
+          <<: *address
+      insurance_policy:
+        insurer_id: "verzekeraar"
+        name: "naam"
+        vecozo_codes: "Vecozo code(s)"
+        reimburse_own_contribution: "vergoeding eigen bijdrage basis verzekering"
+        price_per_session_type: "sessiebedrag aanvullende sessies"
+        price_per_session: "bedrag €"
+        maximum_supplement_type: "maximale aanvulling"
+        maximum_supplement_amount: "bedrag €"
+        maximum_supplement_sessions: "aantal sessies"
+        submit_by_client: "aanvullende verzekering indienen via cliënt"
+        active_years: "actieve jaren"
+      financial_data:
+        year: "Boekjaar"
+        uzovi_number: "Uzovi-nummer"
+        invoice_uzovi_number: "Facturatie uzovi-nummer"
+        base_rate_string: "basistarief €"
+        invoice_amount_string: "facturatiebedrag psycholoog €"
+        method_of_submission: "wijze van indienen"
+        own_contribution_invoicing_to: "eigen bijdrage wordt gefactureerd via"
+        sales_percentage: 'percentage nza-tarief'
+        margin: "Marge (%)"
+        ledger_number_first_line_lo_rate: "GB regulier laag"
+        ledger_number_first_line_hi_rate: "GB regulier hoog"
+        psychologist_all: "Regulier laag %"
+        psychologist_incidental: "Regulier hoog %"
+        psychologist_mindfulness: "Mindfulness %"
+        dbc_based_per_session: "Privaat"
+        dbc_based_private_regular_per_session: "Privaat Regulier"
+        dbc_based_per_session_care: "Zorgdeel"
+        dbc_based_per_session_cure: "Arbodeel"
+        dbc_based_per_session_copz: "Per sessie"
+        dbc_based_copz_per_session_intake: "Per sessie intake"
+        dbc_based_copz_per_session_trajectory: "Vervolgtraject"
+        dbc_based_copz_quick_scan: "Quickscan"
+        dbc_based_copz_intake: "Intake"
+        dbc_based_copz_short_trajectory: "Kort"
+        dbc_based_copz_medium_trajectory: "Middel"
+        dbc_based_copz_intensive_trajectory: "Intensief"
+        dbc_based_copz_long_term_trajectory: "Chronisch"
+        dbc_based_no_show: "No show"
+        incomplete_trajectory_amount: "Onv. beh."
+        dbc_based_private_quick_scan: "Quickscan"
+        dbc_based_private_intake: "Intake"
+        dbc_based_private_short_trajectory: "Kort"
+        dbc_based_private_medium_trajectory: "Middel"
+        dbc_based_private_intensive_trajectory: "Intensief"
+        dbc_based_private_long_term_trajectory: "Chronisch"
+        incomplete_trajectory_amount: "Onv. beh."
+        dbc_based_curity_quick_scan: "Quickscan"
+        dbc_based_curity_intake: "Intake"
+        dbc_based_curity_short_trajectory: "Kort"
+        dbc_based_curity_medium_trajectory: "Middel"
+        dbc_based_curity_intensive_trajectory: "Intensief"
+        dbc_based_curity_long_term_trajectory: "Chronisch"
+        dbc_based_private_three_interview: "Driegesprek"
+        dbc_based_private_extend: "Verlenging"
+        dbc_based_private_mindfulness: "Mindfulness"
+
+      cov_check:
+        birth_date: "geboortedatum"
+        insurance_numer: "verz. nummer"
+        zipcode: "postcode"
+        bsn: "bsn"
+        house_number: "huisnr"
+        house_number_extension: "toev"
+      treatment_approval:
+        approval_to_id: "voor akkoord aan"
+        approval_to_send_type: "verstuur met"
+        notice_to_id: "ter kennisgeving aan"
+        notice_to_send_type: "verstuur met"
+        copy_of_notice_to_id: "extra kennisgeving aan"
+        copy_of_notice_to_send_type: "verstuur met"
+      session_request:
+        session_count: "Sessies"
+        approval_to_id: "voor akkoord aan"
+        approval_to_send_type: "verstuur met"
+        show_psychologist: 'Vermeld psycholoog in offerte'
+        use_insurance: "Verzekerd?"
+        private_or_insured: "Privaat of verzekerd"
+        session_request_with_intake: "Voeg intakegesprek toe aan behandeltraject (indien er geen budgetaanvraag Intake wordt toegepast)"
+        notice_to_id: "ter kennisgeving aan"
+        notice_to_send_type: "verstuur met"
+        copy_of_notice_to_id: "extra kennisgeving aan"
+        copy_of_notice_to_send_type: "verstuur met"
+        assignment_confirmation_to_id: "Opdrachtbevestiging aan"
+        received_approval_file: "Ontvangen offerte"
+        trajectory_section: "Type aanvraag"
+        reference: "Referentie"
+        first_session: "Datum waarop de eerste sessie plaatsvond"
+        trajectory_section_options:
+          incomplete_trajectory: "Onvolledig behandeltraject"
+          per_session: "Per sessie"
+          intake_with_short_trajectory: "Behandeltraject Kort"
+          intake_with_medium_trajectory: "Behandeltraject Middel"
+          intake_with_intensive_trajectory: "Behandeltraject Intensief"
+          intake_with_long_term_trajectory: "Behandeltraject Chronisch"
+          transition_trajectory: "Transitie traject"
+          extend: "Verlenging"
+          mindfulness: "mindfulness"
+          intake: "Intake"
+          light: "Licht"
+          light_to_intensive: "Overgang van licht naar intensief"
+          intensive: "Intensief"
+          quick_scan: "Quickscan"
+          three_interview: "Driegesprek"
+          first_line: "Regulier"
+          mindfulness: "Mindfulness"
+
+      invoice:
+        category_options:
+          declaration: "declaratie"
+          insurance: "verzekering"
+          client: "cliënt"
+          general: "algemeen"
+
+      contract:
+        template_name: "template naam"
+      file: "Bestand"
+  flash:
+    client:
+      update:
+       bsn_false: "BSN voldoet niet aan elf-proef"
+    treatments:
+      archived:
+        notice: "De behandeling is gearchiveerd"
+      reopen:
+        notice: "De behandeling is heropend."
+      abandon:
+        notice: "De behandeling is op status 'vervallen' gezet"
+      delete_last_session_request:
+        notice: "De laatste (sessie)aanvraag is verwijderd"
+      reset_treatment:
+        notice: "De behandeling is gereset"
+    insurances:
+      destroy:
+        notice: "Verzekering is verwijderd"
+    actions:
+      not_saved: "%{resource_name} is niet opgeslagen!"
+      create:
+        notice: "%{resource_name} is aangemaakt"
+      update:
+        notice: "%{resource_name} is aangepast"
+    contacts:
+      create:
+        notice: "Contactpersoon is aangemaakt"
+      update:
+        notice: "Contactpersoon is aangepast"
+      destroy:
+        notice: "Contactpersoon is verwijderd"
+    psychologists:
+      create:
+        notice: "Psycholoog is aangemaakt"
+      update:
+        notice: "Psycholoog is aangepast"
+        iban_false: "IBAN incorrect"
+    periods:
+      create:
+        notice: "Periode is toegevoegd"
+      update:
+        notice: "Periode is aangepast"
+    insurance_policies:
+      create:
+        notice: "Polis is aangemaakt"
+      update:
+        notice: "Polis is aangepast"
+    treatment_locations:
+      create:
+        notice: "Adres is aangemaakt."
+      update:
+        notice: "Adres is aangepast."
+    contracts:
+      choose_valid_type: "Kies een geldig zorgproduct of template"
+      assembled_contract_invalid: "Er kon geen geldig contract samengevoegd worden"
+      no_contracts_found: "Het systeem kon geen contracten vinden om samen te voegen"
+      create:
+        notice: "Contract is successvol aangemaakt."
+        alert: "Contract is niet opgeslagen!"
+      update:
+        notice: "Contract is successvol aangepast."
+        alert: "Contract is niet opgeslagen!"
+      destroy:
+        notice: "Contract is verwijderd."
+    employees:
+      create:
+        notice: "Medewerker is aangemaakt."
+      update:
+        notice: "Medewerker is aangepast."
+    financial_data:
+      create:
+        notice: "Data is aangemaakt."
+      update:
+        notice: "Data is aangepast."
+    organisations:
+      update:
+        notice: "Organisatie is aangepast."
+        failure: "Organisatie is niet opgeslagen!"
+        defunct:  "Organisatie is nu inactief"
+      destroy:
+        notice: "Organisatie is verwijderd."
+    clients:
+      update:
+        notice: "Cliënt is aangepast."
+      destroy:
+        notice: "Cliënt is verwijderd!"
+    session_requests:
+      create:
+        notice: "Budgetaanvraag is gemaakt."
+        dbc_based_el: "Budgetaanvraag voor regulier behandeltraject gemaakt"
+      update:
+        notice: "Budgetaanvraag is aangepast."
+      create_relation_invoice:
+        alert:  "Het systeem kon geen relatiefactuur aanmaken: %{reason}"
+    ei_declarations:
+      create:
+        notice: "De EI Declaratie is aangemaakt."
+        alert: "Vink tenminste een periode aan"
+      destroy:
+        notice: "De EI Declaratie is verwijderd, en de bijbehorende sessies staan weer op gedeclareerd door de desbetreffende psychologen"
+      update:
+        notice:
+          validating: "De EI Declaratie is opgestuurd naar vecozo voor validatie"
+          sent: "De EI Declaratie zal naar Vecozo verzonden worden."
+          corrected: "De EI Declaratie flatfile lines zijn geüpdatet."
+          accepted: "De Ei Declaratie is geaccepteerd."
+          rejected: "De Ei Declaratie is afgekeurd."
+      retrieve_validation:
+        notice: "De EI Declaratie validatie is succesvol opgevraagd."
+      retrieve_state:
+        notices:
+          VSPEDP114: "Declaratie is gevonden, maar er zijn nog geen resultaten voor deze declaratie"
+          VSPEDP323: "Er is geen declaratie gevonden waarvoor retourbestanden kunnen worden opgevraagd."
+          VSPEDP102: "De EI Declaratie status is succesvol opgevraagd."
+          VSPEDP107: "Succesvol EI-retourbestand aangeboden. Status EI-retourbestand veranderd naar 'Opgehaald'."
+      credit:
+        one: "Er is %{count} sessie gecrediteerd"
+        other: "Er zijn %{count} sessies gecrediteerd"
+      delete:
+        one: "Er is %{count} regel verwijderd"
+        other: "Er zijn %{count} regels verwijderd"
+    flatfile_lines:
+      destroy:
+        notice: "De flatfile (groep) is verwijderd"
+    invoices:
+      create_sales_invoices:
+        alert:  "Het systeem kon geen factuur aanmaken: %{reason}"
+
+  hints:
+    date: "bijv: 20-01-2012"
+  action:
+    executed_at: "Uitgevoerd op: %{time}"
+    executed_at_new: "%{time}"
+    executed_at_unknown: "Onbekende uitvoerdatum"
+    executed_at_unknown_new: "datum onbekend"
+    not_performed: "Niet uitgevoerd"
+    disabled: "Hoeft niet uitgevoerd te worden"
+    requested: "Aangevraagd"
+    perform: "Uitvoeren"
+    initial_contact:
+      title: "Initieel contact"
+      contacted_at_hint: "Bijv. 01-01-2001"
+    performance_code: "Prestatiecode: %{code}"
+    performance_code_new: "%{code}"
+
+  budget:
+    session_requests_empty: "Er kan pas een schatting gemaakt worden op het moment dat de desbetreffende sessie aanvraag is goedgekeurd"
+    projected_total: "Niet uitgevoerd"
+    actual_total: "Uitgevoerd"
+    surcharge: "COPZ"
+    total: "Totaal"
+    header: "Budget"
+
+  clients:
+    index:
+      title: "Cliënten"
+      clients: "Cliënten"
+      new: "Nieuwe cliënt"
+      name: "Naam"
+      number: "Nummer"
+      bsn: "Bsn"
+      birth_date: "Geboortedatum"
+      created_at: "Aangemeld op"
+      existing_treatment: "Laatste behandeling"
+      new_request: "Aanmelding invoeren"
+      new_client: "Nieuwe cliënt"
+      new_treatment: "Nieuw behandeltraject"
+
+  invoices:
+    index:
+      creditor_search: "crediteur (optioneel)"
+      start_date: "startdatum (optioneel)"
+      end_date: "einddatum (optioneel)"
+      query: "nummer (optioneel)"
+      invoices_empty: "Er zijn nog geen facturen aangemaakt voor deze behandeling"
+      all_states: "Betaald + Openstaand"
+      all_types: "Inkoop + Verkoop"
+      all_credit_invoices: "Debit + Credit"
+      debit: "Debit"
+      credit: "Credit"
+      purchase: "Inkoop"
+      sales: "Verkoop"
+    show:
+      declaration: "Factuur"
+      credit_memo: "Credit"
+      general: "Factuur"
+      insurance: "Verkoop factuur"
+      client: "Cliënt factuur"
+      invoice_info: "Factuur info"
+      title: "Factuur nummer %{number}"
+      treatment_invoices: "Facturen van deze behandeling"
+      all_invoices: "Alle facturen"
+      create_sales_invoices: "Maak verkoopfacturen aan"
+    edit:
+      invoice: "Factuur bewerken"
+      not_paid: "niet voldaan"
+      billing_address: "Factuuradres"
+      add_row: "Rij toevoegen"
+      paid_notice: "De factuur is als betaald gemarkeerd"
+      credit_notice:
+        one: "Er is %{count} sessie gecrediteerd"
+        other: "Er zijn %{count} sessies gecrediteerd"
+      sales_invoices_created:
+        one: "Er is 1 verkoopfactuur aangemaakt"
+        other: "Er zijn %{count} verkoopfacturen aangemaakt"
+    form_actions:
+      toggle_select: "Toggle selectie"
+      new: "Nieuwe declaraties indienen"
+    pdf:
+      select_something: "Selecteer op zijn minst 1 factuur"
+    perform_actions:
+      credit_rows: "Crediteer factuurregels"
+      ei_declaration: "Eideclaratie"
+      view_ei_declaration: "Bekijk eideclaratie"
+    header:
+      show: "Factuur"
+      actions: "Factuuracties"
+
+  treatments:
+    notes:
+      edit:
+        title: "Notitie bewerken"
+    edit:
+      request: "Aanvraag invoeren"
+    index:
+      all_products: "alle producten"
+      start_date: "startdatum (optioneel)"
+      end_date: "einddatum (optioneel)"
+      search_term: "zoekterm (optioneel)"
+      export_csv: "CSV export Behandelingen"
+      export_csv_fa: " CSV export Sessies"
+    invoices:
+      title: "Financieel"
+      index:
+        invoices: "Facturen"
+        invoices_empty: "Er zijn nog geen facturen aangemaakt voor deze behandeling"
+      dbc_based:
+        client: "Cliëntfactuur"
+        relation: "Relatiefactuur"
+        undo: "Wijzigen"
+
+    actions:
+      title: "Behandeling"
+      overviews:
+        initial_contact:
+          title: "Initieel contact"
+        intake:
+          title: "Intakegesprek"
+        session:
+          title: "Sessie"
+        quick_scan:
+          title: "Quickscan"
+        three_interview:
+          title: "Driegesprek"
+      index:
+        add_session: "Sessie toevoegen"
+        add_intake_session: "Intake-sessie toevoegen"
+        progress_report: "Voortgangsrapportage"
+        general_practitioner_report: "Huisartsverslag"
+        create_dsm_iv_diagnosis: "DSM IV diagnose"
+        create_dsm_5_diagnosis: "DSM 5 diagnose"
+        session_request: "Verlenging aanvragen"
+        finalize: "Behandeling afronden"
+        close: "Behandeling sluiten"
+        reopen: "Heropen behandeling"
+        closed_on: "Deze behandeling is gesloten op %{date}"
+        files: "Bestanden"
+        filename: "Bestandsnaam"
+      plan_task_form:
+        schedule: "inplannen op"
+        scheduled_on: "ingepland op"
+        plan: "Inplannen"
+        change: "Wijzigen"
+      show:
+        perform_report: "Verwerk rapportage"
+        view_scan: "Bekijk scan van het rapport"
+      correction_form:
+        reset: "Overschrijf met blanco actie"
+        confirm_reset: "Weet u zeker dat u deze actie wilt overschrijven met een blanco actie?"
+        confirm_delete: "Weet u zeker dat u deze actie wilt verwijderen?"
+      overview:
+        play_timecop: "Bewerk datum"
+        initial_contact:
+          title: "Initieel contact"
+        intake:
+          title: "Intakegesprek"
+          approved: "Goedgekeurd"
+          not_approved: "Nog niet goedgekeurd"
+        permission:
+          title: "Toestemmingsformulier"
+        permission_bz:
+          title: "Toestemmingsformulier"
+        permission_bz_vgz_iza:
+          title: "Toestemmingsformulier VGZ-IZA"
+        intake_report:
+          title: "Intakerapportage"
+        intake_report_vgz_iza:
+          title: "Intakerapport VGZ-IZA"
+        time_schedule_report:
+          title: "Tijdpadrapportage"
+        time_schedule_report_vgz_iza:
+          title: "Tijdpadrapportage VGZ-IZA"
+        session:
+          title: "Sessie"
+        final_report:
+          title: "Eindrapportage"
+        final_report_vgz_iza:
+          title: "Afsluitrapportage VGZ-IZA"
+        progress_report:
+          title: "Voortgangsrapportage"
+        periodical_report:
+          title: "Voortgangsrapportage"
+        regression_prevention:
+          title: "Terugvalpreventie"
+          approved: "Goedgekeurd"
+          not_approved: "Nog niet goedgekeurd"
+        dsm4_diagnosis:
+          title: "DSM-IV-TR diagnose"
+        dsm5_diagnosis:
+          title: "DSM-5 diagnose"
+        general_practitioner_report:
+          title: "Huisarts Rapport"
+        quick_scan:
+          title: "Quickscan"
+        three_interview:
+          title: "Driegesprek"
+      reports:
+        default:
+          report_date: "Datum rapportage:"
+          reference_number: "Referentienummer Cenzo:"
+          signatures: "Ondertekening"
+          signature_client: "Handtekening cliënt:"
+          signature_psychologist: "Handtekening psycholoog:"
+          date: "Datum:"
+          place: "Plaats:"
+        general_practitioner_report:
+          characteristic: "kenmerk: intakebrief %{name}"
+          honorable: "Geachte heer/mevrouw %{name},"
+          on_date_intake: "Op datum intake zag ik uw patiënt(e)"
+          born_on: "geboren op %{birth_date},"
+          city: "Woonplaats"
+          for_intakes: "voor een intakegesprek(ken)."
+          on_the_basis_of: "Op basis van de intake kan ik u het volgende meedelen:"
+          complaint_description: "Klachtomschrijving:"
+          conclusion: "Conclusie:"
+          scl_90_scores: "SCL 90 scores"
+          scl_90_score_description: "De scores van patiënt(e) op de SCL-90-R zijn op de onderdelen:"
+          dsm4_classification: "DSM IV-classificatie"
+          dsm4_classification_description: "Voorlopige classificatie volgens de DSM IV:"
+          treatment_proposal: "Behandelvoorstel:"
+          goal: "Doelstelling van de behandeling:"
+          informed: "Ik hoop u hiermee voor nu voldoende te hebben geïnformeerd. Vanzelfsprekend ben ik bereid een en ander telefonisch toe te lichten."
+          regards: "Met vriendelijke groeten,"
+          cenzo_psychologist: "Cenzo psycholoog"
+
+    insurances:
+      insurances:
+        used_outside_of_cenzo: "buiten Cenzo"
+        end_date_required: "Einddatum verplicht"
+      edit:
+        history: "Buiten Cenzo om ontvangen zorg"
+        confirm_delete: "Weet u zeker dat u deze verzekering wilt verwijderen?"
+
+    requests:
+      edit:
+        request: "Aanmelding wijzigen"
+
+    header:
+      other_treatments: "Andere trajecten..."
+      treatment_with_number: "%{number}"
+    complete: "Gereed"
+    pending: "Pending"
+    request:
+      title: "Aanmelding"
+      description: "%{product} "
+      for: "Voor"
+      intake_with_short_trajectory: "Kort traject"
+      intake_with_medium_trajectory: "Middelmatig  traject"
+      intake_with_intensive_trajectory: "Intensief traject"
+      intake_with_long_term_trajectory: "Chronisch traject"
+      transition_trajectory: "Transitie"
+      quick_scan: "Quickscan"
+      three_interview: "Driegesprek"
+      first_line: "Regulier"
+      intake: "Intake"
+      extend: "Verlenging"
+      per_session: "Per sessie"
+      mindfulness: "Mindfulness"
+    addresses:
+      billing_address: "Postadres"
+      treatment_address: "Verblijfadres"
+      billing_and_treatment_address: "Post- en verblijfadres"
+      one_time_billing_address: "Eenmalig factuuradres"
+      vecozo_address: "Vecozo"
+      edit:
+        missing_address_data: "<strong>Let op!</strong> Er is geen adres van Vecozo bekend, dit heeft gevolgen voor de facturatie. Doe de COV check opnieuw om dit probleem op te lossen."
+        cov_check: "Cov check uitvoeren"
+        title: "Adressen"
+        copy_from_vecozo: "Kopiëeren van Vecozo"
+        copy_billing_address: "Kopiëer postadres"
+        no_coordinates_found: "Er kunnen geen coördinaten gevonden worden voor dit adres. Verander de adresgegevens en probeer opnieuw."
+    employers:
+      edit:
+        title: "Facturatie"
+        for_contract: "Contractueel verplicht"
+    contracts:
+      edit:
+        title: "Projectafspraken"
+        has_deviations: "Dit contract heeft wijzigingen"
+      show:
+        title: "Projectafspraken"
+    budgets:
+      edit:
+        title: "Budget"
+    approvals:
+      form:
+        title: "Offerte"
+    psychologists:
+      treatment_location:
+        policy_doesnt_cover_ag: "De polissen van de client dekken geen behandelingen door AG-psychologen."
+        email: "E-mail"
+        phone: "Tel. nr."
+        mobile: "Mobiel"
+        treatment_location: "Verblijfadres"
+        select: "Selecteer"
+        selected: "Geselecteerd"
+      index:
+        distance: "Maximale afstand"
+        source_address: "Vanaf"
+        name: "psycholoog naam"
+        education_type: "psycholoogtype"
+        all: "Alle typen"
+    session_requests:
+      draft_letter:
+        salutation: "Geachte %{name},"
+        characteristic: "Ons kenmerk: "
+        no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+        phone: "Telefoon: %{number}"
+        work_mobile_phone: "Mobiel: %{number}"
+        closure: "Met dank en vriendelijke groet,"
+        cenzo: "Cenzo B.V."
+        attachments: "Bijlagen:"
+        background_info: "Achtergrondinformatie"
+        permission_form: "Toestemmingsformulier"
+        quick_scan: "Voorwaarden screening Quickscan Cenzo"
+      draft_letter_trajectory:
+        salutation: "Geachte %{name},"
+        characteristic: "Ons kenmerk: "
+        no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+        phone: "Telefoon: %{number}"
+        work_mobile_phone: "Mobiel: %{number}"
+        closure: "Met dank en vriendelijke groet,"
+        cenzo: "Cenzo B.V."
+        attachments: "Bijlagen:"
+        background_info: "Achtergrondinformatie"
+        permission_form: "Toestemmingsformulier"
+        quick_scan: "Voorwaarden screening Quickscan Cenzo"
+      draft_letter_quick_scan:
+        salutation: "Geachte %{name},"
+        characteristic: "Ons kenmerk: "
+        no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+        phone: "Telefoon: %{number}"
+        work_mobile_phone: "Mobiel: %{number}"
+        closure: "Met dank en vriendelijke groet,"
+        cenzo: "Cenzo B.V."
+        attachments: "Bijlagen:"
+        background_info: "Achtergrondinformatie"
+        permission_form: "Toestemmingsformulier"
+        quick_scan: "Voorwaarden screening Quickscan Cenzo"
+      new:
+        title: "Nieuwe budgetaanvraag"
+      edit:
+        title: "Bewerk budgetaanvraag"
+      form:
+        none: "Geen"
+        sessions: "Sessies"
+        approval: "Offerte"
+        first_session: "Eerste sessie"
+        extra_options: "Extra opties"
+        treatment_without_intake: "Voeg intakegesprek toe aan behandeltraject (indien er geen budgetaanvraag Intake wordt toegepast)"
+        assignment_confirmation: "Opdrachtbevestiging"
+        Behandeltraject_short: "Behandeltraject kort"
+        Behandeltraject_medium: "Behandeltraject Middel"
+        Behandeltraject_intensive: "Behandeltraject Intensief"
+        Behandeltraject_intense: "Behandeltraject Intensief"
+        Behandeltraject_long_term: "Behandeltraject Chronisch"
+        Behandeltraject_transition: "Behandeltraject Transitie"
+        gbggz_short: "Behandeltraject kort"
+        gbggz_medium: "Behandeltraject Middel"
+        gbggz_intensive: "Behandeltraject Intensief"
+        gbggz_intense: "Behandeltraject Intensief"
+        gbggz_long_term: "Behandeltraject Chronisch"
+        gbggz_transition: "Behandeltraject Transitie"
+        quick_scan: "Quickscan"
+        intake: "Intake"
+        three_interview: "Driegesprek"
+        first_line: "Regulier"
+        extend: "Verlenging"
+        mindfulness: "mindfulness"
+        intake_with_follow_up_sessions: "Intake met vervolgsessies"
+      overview_list:
+        date: "Datum"
+        price: "Prijs"
+        approval_request_not_sent: "Offerte nog niet verstuurd"
+        sent: "Offerte verstuurd op %{date}"
+        approved: "geaccepteerd op %{date}"
+        rejected: "Afgewezen"
+        no_session_requests_yet: "Er zijn nog geen sessieaanvragen"
+        new_session_request: "Eerste budgetaanvraag"
+      show:
+        title: "Aanvraag op %{date}"
+        budget: "Budget"
+        approval: "Offerte"
+        no_actions: "Er zijn geen acties of rapporten bij deze aanvraag"
+        number_of_sessions_requested: "Aantal aangevraagde sessies: %{count}"
+        trajectory_section:
+          incomplete_trajectory: "Onvolledig behandeltraject"
+          per_session: "Per sessie"
+          intake_with_short_trajectory: "Behandeltraject Kort"
+          intake_with_medium_trajectory: "Behandeltraject Middel"
+          intake_with_intensive_trajectory: "Behandeltraject Intensief"
+          intake_with_long_term_trajectory: "Behandeltraject Chronisch"
+          transition_trajectory: "Transitie traject"
+          mindfulness: "mindfulness"
+          extend: "Verlenging"
+          intake: "Intake"
+          light: "Licht"
+          light_to_intensive: "Overgang van licht naar intensief"
+          intensive: "Intensief"
+          quick_scan: "Quickscan"
+          three_interview: "Driegesprek"
+#          first_line: "Regulier"
+          mindfulness: "Mindfulness"
+        not_corrected_yet: "Deze sessie aanvraag is nog niet afgemaakt door een PA."
+        no_approval_sent_yet: "Er is nog geen offerte verstuurd voor deze budgetaanvraag."
+        approval_letter: "t/m 2013"
+        new_approval_letter: "Behandeltraject"
+        draft_letter: "Oproepbrief"
+        assignment_confirmation: "Opdrachtbevestiging"
+        treatment_confirmation: "Offerte behandeltraject"
+        send_approval: "Offerte verstuurd"
+        create_relation_invoice: "Nieuwe relatiefactuur maken"
+        back: "Terug naar aanmelding"
+        approval_request_sent: "De offerte is verstuurd op %{date}. Voeg de ontvangen offerte bij en verstuur onderstaand formulier om de acceptatie te verwerken."
+        approval_accepted: "Offerte geaccepteerd"
+        approval_rejected: "Offerte afgewezen"
+        approved: "De offerte is geaccepteerd op %{date}"
+        received_approval: "Ontvangen offerte"
+        finalize: "Budgetaanvraag afmaken"
+        edit: "Bewerk budgeteaanvraag"
+        sent: "Offerte verstuurd op %{date}"
+        delete_actions: "Acties verwijderen"
+      approval_letter:
+        approval_to: "Offerte"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+      treatment_approval_letter:
+        approval_to: "Offerte"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+      letter_2013:
+        approval_of_psychological_care_costs: "Kosten offerte psychologische zorg"
+        approval_to: "Indien akkoord gaarne ondertekend retour"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+        requester: "Referenties opdrachtgever:"
+        requester_details:
+          requesting_contact: "Aanvrager:"
+          employer: "Werkgever:"
+          care_of: "t.a.v."
+          department: "Afdeling:"
+        cenzo: "Referenties Cenzo:"
+        processed_by: "Behandeld door:"
+        cenzo_details:
+          name: "Cenzo B.V."
+          department: "Afdeling Projectadministratie"
+          address: "Stationsweg 24"
+          zipcode: "1441EJ"
+          city: "Purmerend"
+          phone_number: "T. 020 - 42 02 999"
+          fax_number: "F. 020 - 42 05 283"
+          email: "E. projectadministratie@cenzo.nl"
+          web: "www.cenzo.nl"
+          email_info: "info@cenzo.nl"
+        cenzo_reference: "Cenzo-referentie:"
+        date: "Datum"
+        client: "Betreft cliënt:"
+        bsn: "BSN:"
+        psychologist: "Doorverwezen naar Cenzo-psycholoog:"
+        costs: "Kosten:"
+        costs_details:
+          intakes:
+            one: "Intake (1 sessie)"
+            other: "Intake (%{count} sessies)"
+          other_sessions:
+            one: "1 Sessie"
+            other: "%{count} Sessies"
+          surcharge: "Cenzo ondersteuning psychologische zorg"
+          total_employer_costs: "Totale kosten voor bedrijf"
+          possible_insurer_coverage: "Mogelijke vergoeding zorgverzekeraar"
+          possible_reduced_employer_costs: "Indien zorgverzekeraar vergoedt te betalen arbo curatieve kosten voor bedrijf"
+          see_tariffs: '*zie "Toelichting tarieven"'
+          caveat_insurance: "Cenzo spant zich in daar waar mogelijk de verzekering van cliënt aan te spreken. Momenteel zijn nog niet alle vergoedingen voor 2013 bekend, daarom kan het zijn dat de ‘mogelijke vergoeding zorgverzekeraar’ niet (juist) is ingevuld."
+          caveat_treatment_length: "Indien het aantal daadwerkelijk gegeven sessies lager uitvalt, dan kan de vergoeding van de zorgverzekeraar rechtevenredig dalen met het aantal sessies."
+          tariff_info: "Toelichting tarieven 2012/2013"
+          tariff_info_details: "Bij het tekenen van deze offerte gaat ondergetekende akkoord met de totale kosten voor het bedrijf tegen het tarief dat op de datum van de desbetreffende sessie(s) geldig is. Cenzo brengt alleen dat wat heeft plaatsgevonden in rekening. Vanaf 1 januari 2013 gelden er nieuwe tarieven. Wij verwijzen u voor meer informatie naar onze website."
+        approved_on: "Voor akkoord, d.d."
+      letter_2014:
+        approval_of_psychological_care_costs: "Kosten offerte psychologische zorg"
+        approval_to: "Indien akkoord gaarne ondertekend retour"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+        requester: "Referenties opdrachtgever:"
+        requester_details:
+          requesting_contact: "Aanvrager:"
+          employer: "Werkgever:"
+          care_of: "t.a.v."
+          department: "Afdeling:"
+        cenzo: "Referenties Cenzo:"
+        processed_by: "Behandeld door:"
+        cenzo_details:
+          name: "Cenzo B.V."
+          department: "Afdeling Projectadministratie"
+          address: "Stationsweg 24"
+          zipcode: "1441EJ"
+          city: "Purmerend"
+          phone_number: "T. 020 - 42 02 999"
+          fax_number: "F. 020 - 42 05 283"
+          email: "E. projectadministratie@cenzo.nl"
+          web: "www.cenzo.nl"
+          email_info: "info@cenzo.nl"
+        cenzo_reference: "Cenzo-referentie:"
+        date: "Datum"
+        client: "Betreft cliënt:"
+        bsn: "BSN:"
+        psychologist: "Doorverwezen naar Cenzo-psycholoog:"
+        costs: "Kosten:"
+        costs_details:
+          intakes:
+            one: "Intake (1 sessie)"
+            other: "Intake (%{count} sessies)"
+          other_sessions:
+            one: "1 Sessie"
+            other: "%{count} Sessies"
+          surcharge: "Cenzo ondersteuning psychologische zorg"
+          total_employer_costs: "Totale kosten voor bedrijf"
+          possible_insurer_coverage: "Mogelijke vergoeding zorgverzekeraar"
+          possible_reduced_employer_costs: "Indien zorgverzekeraar vergoedt te betalen door bedrijf"
+          see_tariffs: '*zie "Toelichting tarieven"'
+          caveat_insurance: "Cenzo spant zich in daar waar mogelijk de verzekering van cliënt aan te spreken. Momenteel zijn nog niet alle vergoedingen voor 2013 bekend, daarom kan het zijn dat de ‘mogelijke vergoeding zorgverzekeraar’ niet (juist) is ingevuld."
+          caveat_treatment_length: "Indien het aantal daadwerkelijk gegeven sessies lager uitvalt, dan kan de vergoeding van de zorgverzekeraar rechtevenredig dalen met het aantal sessies."
+          tariff_info: "Toelichting tarieven 2012/2013"
+          tariff_info_details: "Bij het tekenen van deze offerte gaat ondergetekende akkoord met de totale kosten voor het bedrijf tegen het tarief dat op de datum van de desbetreffende sessie(s) geldig is. Cenzo brengt alleen dat wat heeft plaatsgevonden in rekening. Vanaf 1 januari 2013 gelden er nieuwe tarieven. Wij verwijzen u voor meer informatie naar onze website."
+        approved_on: "Voor akkoord, d.d."
+      bggz_approval_letter:
+        approval_to: "Offerte"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+      treatment_offer:
+        approval_of_psychological_care_costs: "Kosten offerte psychologische zorg"
+        approval_to: "Indien akkoord gaarne ondertekend retour"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+        requester: "Referenties opdrachtgever:"
+        requester_details:
+          requesting_contact: "Aanvrager:"
+          employer: "Werkgever:"
+          care_of: "t.a.v."
+          department: "Afdeling:"
+        cenzo: "Referenties Cenzo:"
+        processed_by: "Behandeld door:"
+        cenzo_details:
+          name: "Cenzo B.V."
+          department: "Afdeling Projectadministratie"
+          address: "Stationsweg 24"
+          zipcode: "1441EJ"
+          city: "Purmerend"
+          phone_number: "T. 020 - 42 02 999"
+          fax_number: "F. 020 - 42 05 283"
+          email: "E. projectadministratie@cenzo.nl"
+          web: "www.cenzo.nl"
+          email_info: "info@cenzo.nl"
+        cenzo_reference: "Cenzo-referentie:"
+        date: "Datum"
+        client: "Betreft cliënt:"
+        bsn: "BSN:"
+        psychologist: "Doorverwezen naar Cenzo-psycholoog:"
+        costs: "Kosten:"
+        costs_details:
+          intakes:
+            one: "Intake (1 sessie)"
+            other: "Intake (%{count} sessies)"
+          other_sessions:
+            one: "1 Sessie"
+            other: "%{count} Sessies"
+          surcharge: "Cenzo ondersteuning psychologische zorg"
+          total_employer_costs: "Totale kosten voor bedrijf"
+          possible_insurer_coverage: "Mogelijke vergoeding zorgverzekeraar"
+          possible_reduced_employer_costs: "Indien zorgverzekeraar vergoedt te betalen door bedrijf"
+          see_tariffs: '*zie "Toelichting tarieven"'
+          caveat_insurance: "Cenzo spant zich in daar waar mogelijk de verzekering van cliënt aan te spreken. Momenteel zijn nog niet alle vergoedingen voor 2013 bekend, daarom kan het zijn dat de ‘mogelijke vergoeding zorgverzekeraar’ niet (juist) is ingevuld."
+          caveat_treatment_length: "Indien het aantal daadwerkelijk gegeven sessies lager uitvalt, dan kan de vergoeding van de zorgverzekeraar rechtevenredig dalen met het aantal sessies."
+          tariff_info: "Toelichting tarieven 2012/2013"
+          tariff_info_details: "Bij het tekenen van deze offerte gaat ondergetekende akkoord met de totale kosten voor het bedrijf tegen het tarief dat op de datum van de desbetreffende sessie(s) geldig is. Cenzo brengt alleen dat wat heeft plaatsgevonden in rekening. Vanaf 1 januari 2013 gelden er nieuwe tarieven. Wij verwijzen u voor meer informatie naar onze website."
+        approved_on: "Voor akkoord, d.d."
+      bggz_approval_letter:
+        approval_to: "Offerte"
+        notice_to: "Ter kennisgeving"
+        copy_of_notice_to: "Kopie"
+
+      letter_footer:
+        cenzo_details:
+          name: "Cenzo B.V."
+          department: "Afdeling Projectadministratie"
+          address: "Stationsweg 24"
+          zipcode: "1441EJ"
+          city: "Purmerend"
+          phone_number: "T. 020 - 42 02 999"
+          fax_number: "F. 020 - 42 05 283"
+          email: "E. projectadministratie@cenzo.nl"
+          web: "www.cenzo.nl"
+          email_info: "info@cenzo.nl"
+        agreement_version_date: "Offerte v1.0 dd. 18-01-2013"
+        approval_letter_to: "Offerte naar:"
+        department_project_admin: "Afdeling Projectadministratie"
+        email_project_admin: "projectadministratie@cenzo.nl"
+        or: "óf"
+        fax_project_admin: "F. 020-4205283"
+        tel_project_admin: "T. 020-3445046"
+
+      send_approval_request:
+        sent: "Offerte verstuurd"
+      approve:
+        approved: "Offerte geaccepteerd"
+    attachments:
+      title: "Bestanden"
+      index:
+        files: "Bestanden"
+        filename: "Bestandsnaam"
+        created_at: "Toegevoegd op"
+        no_files: "Nog geen bestanden"
+      new:
+        add_file: "Bestand toevoegen"
+    comments:
+      edit_period_expired: "Deze notitie kan niet langer bewerkt worden"
+      index:
+        title: "Communicatie"
+        add_comment: "Notitie toevoegen"
+      edit:
+        title: "Notitie bewerken"
+    notes:
+        index:
+          title: "Notities"
+    digest:
+      title: "Samenvatting"
+      index:
+        title: "Samenvatting"
+    notices_of_meeting: &notice_of_meeting
+      title: "Oproepbrief"
+      confidential: "VERTROUWELIJK"
+      no_mail_address: "Geen postadres ingevuld voor deze persoon!"
+      characteristic: "Ons kenmerk:"
+      salutation: "Geachte %{name},"
+      no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+      phone: "Telefoon: %{number}"
+      work_mobile_phone: "Mobiel: %{number}"
+      closure: "Met dank en vriendelijke groet,"
+      cenzo: "Cenzo B.V."
+      attachments: "Bijlagen:"
+      background_info: "Achtergrondinformatie"
+      permission_form: "Toestemmingsformulier"
+      vgz_iza_notice:
+        <<: *notice_of_meeting
+        intervention_number: "Interventienummer:"
+        more_locations: "(N.b. Psychologen kunnen vanuit meerdere locaties werken)"
+        informed: "Wij vertrouwen erop u hiermee voldoende te hebben geïnformeerd."
+        contacted_by: "U wordt door onderstaande psycholoog gebeld voor het maken van een afspraak, maar u kunt natuurlijk ook eventueel zelf contact opnemen."
+      notice_of_meeting:
+        <<: *notice_of_meeting
+
+      dbc_based:
+        quick_scan:
+          salutation: "Geachte %{name},"
+          characteristic: "Ons kenmerk: "
+          no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+          phone: "Telefoon: %{number}"
+          work_mobile_phone: "Mobiel: %{number}"
+          closure: "Met dank en vriendelijke groet,"
+          cenzo: "Cenzo B.V."
+          attachments: "Bijlagen:"
+          background_info: "Achtergrondinformatie"
+          permission_form: "Toestemmingsformulier"
+        per_session:
+          salutation: "Geachte %{name},"
+          characteristic: "Ons kenmerk: "
+          no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+          phone: "Telefoon: %{number}"
+          work_mobile_phone: "Mobiel: %{number}"
+          closure: "Met dank en vriendelijke groet,"
+          cenzo: "Cenzo B.V."
+          attachments: "Bijlagen:"
+          background_info: "Achtergrondinformatie"
+          permission_form: "Toestemmingsformulier"
+        intake:
+          salutation: "Geachte %{name},"
+          characteristic: "Ons kenmerk: "
+          no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+          phone: "Telefoon: %{number}"
+          work_mobile_phone: "Mobiel: %{number}"
+          closure: "Met dank en vriendelijke groet,"
+          cenzo: "Cenzo B.V."
+          attachments: "Bijlagen:"
+          background_info: "Achtergrondinformatie"
+          permission_form: "Toestemmingsformulier"
+        trajectory:
+          salutation: "Geachte %{name},"
+          characteristic: "Ons kenmerk: "
+          no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+          phone: "Telefoon: %{number}"
+          work_mobile_phone: "Mobiel: %{number}"
+          closure: "Met dank en vriendelijke groet,"
+          cenzo: "Cenzo B.V."
+          attachments: "Bijlagen:"
+          background_info: "Achtergrondinformatie"
+          permission_form: "Toestemmingsformulier"
+        trajectory_after_quick_scan:
+          salutation: "Geachte %{name},"
+          characteristic: "Ons kenmerk: "
+          no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+          phone: "Telefoon: %{number}"
+          work_mobile_phone: "Mobiel: %{number}"
+          closure: "Met dank en vriendelijke groet,"
+          cenzo: "Cenzo B.V."
+          attachments: "Bijlagen:"
+          background_info: "Achtergrondinformatie"
+          permission_form: "Toestemmingsformulier"
+        regular:
+          salutation: "Geachte %{name},"
+          characteristic: "Ons kenmerk: "
+          no_psychologist: "Er is nog geen psycholoog geselecteerd in deze behandeling!"
+          phone: "Telefoon: %{number}"
+          work_mobile_phone: "Mobiel: %{number}"
+          closure: "Met dank en vriendelijke groet,"
+          cenzo: "Cenzo B.V."
+          attachments: "Bijlagen:"
+          background_info: "Achtergrondinformatie"
+          permission_form: "Toestemmingsformulier"
+    shared:
+      show:
+        client: "Cliënt"
+        cov_check: "COV Check"
+        insurance: "Verzekering"
+        psychologists: "Psycholoog"
+        not_filled_in: "Nog niet ingevuld"
+        not_performed: "Nog niet uitgevoerd"
+        not_added: "Nog niet toegevoegd"
+        not_selected: "Nog niet geselecteerd"
+        base_data: "Invoeren"
+        addresses: "Adressen"
+        employer: "Facturatie"
+        contract: "Afspraken"
+        budget: "Budget"
+        approval: "Offerte"
+        session_requests: "Budgetaanvragen"
+        without_insurances: "Zonder enige vorm van verzekering"
+        new_session_request: "Nieuwe budgetaanvraag"
+        abandon: "Zet behandeling op vervallen"
+        approve: "Vrijgeven voor behandelaar"
+        archive: "Archiveer"
+        abandon_confirm: "Weet je dit zeker? Alle sessies in deze behandeling zullen verwijderd worden."
+        approve_confirm: "Behandeltraject voor psycholoog goedkeuren?"
+        reset_treatment: "Reset behandeling"
+        reset_treatment_confirm: "Weet je dit zeker? Alle budgetaanvragen en acties in deze behandeling zullen verwijderd worden."
+        delete_last_session_request: "Laatste aanvraag verwijderen"
+        delete_last_session_request_confirm: "De laatste budgetaanvraag wordt verwijderd. Doorgaan?"
+        delete_last_session_request_not_possible: "De laatste budgetaanvraag kan niet verwijderd worden omdat eraan toegekende acties zijn uitgevoerd"
+        reopen: "Heropen behandeling"
+
+      overview:
+        session_requests:
+          date: "Datum"
+          session_count: "Aantal sessies"
+          state: "Status"
+          price: "Prijs"
+          not_corrected: "Sessieaanvraag nog niet gecontroleerd"
+          approval_request_not_sent: "Offerte nog niet verstuurd"
+          sent: "Offerte verstuurd op %{date}"
+          approved: "Akkoord verklaard op %{date}"
+          rejected: "Afgewezen"
+          no_session_requests_yet: "Er zijn nog geen budgetaanvragen"
+          new_session_request: "Eerste budgetaanvraag"
+        contracts:
+          reassemble: "Opnieuw samenvoegen"
+          reassemble_sure: "Weet u zeker dat u dit contract opnieuw wilt samenvoegen? Eventuele wijzigingen zullen verloren gaan."
+        request:
+          comments: "Notities"
+          no_comment: "Geen"
+
+  shared:
+    cenzo_details:
+      name: "CENZO B.V."
+      address: "Stationsweg 24"
+      zipcode: "1441EJ"
+      city: "Purmerend"
+      phone_number: "T. 020 - 42 02 999"
+      fax_number: "F. 020 - 42 05 283"
+      web: "www.cenzo.nl"
+      email_info: "info@cenzo.nl"
+      kvk: "KvK Amsterdam 33255460"
+    invoices:
+      invoice:
+        invoice_number: "Factuurnummer %{number}"
+        invoice_number_clean: "Factuurnummer:"
+        credit_memo_source_invoice: "Creditfactuur van:"
+        invoice_date: "Factuurdatum:"
+        invoice_spec: "Specificatie overzicht behandeling:"
+        psych_assistance: "Psychologische hulpverlening"
+        cenzo_reference_no: "Cenzo-ref.nr.:"
+        reference_no: "Uw ref.nr.:"
+        processed_by: "Verwerkt door:"
+        phone_number: "Telefoonnummer:"
+        birth_date: "Geboortedatum:"
+        insurance_number: "Polisnummer:"
+        insurance_name: "Polis:"
+        insurer: "Verzekeraar:"
+        insured_number: "Verzekerdenummer:"
+        psychologist: "Behandelaar:"
+        kvk: "KVK nummer:"
+        bsn: "Burgerservicenummer:"
+        referrer: "Doorverwijzer:"
+        this_is_an_invoice: "Hierbij factureren wij u inzake psychologische hulpverlening."
+        treatment_dates: "Behandeldata"
+        performance_code: "Prestatiecode"
+        description: "Omschrijving"
+        margin_cenzo: "Margin Cenzo (%{margin})"
+        invoice_footer: >
+          <center>
+          Vrijgesteld van BTW op grond van art. 11 lid 1 art g.1a.<br>
+          Gaarne betaling binnen 14 dagen overmaken onder vermelding<br>
+          van bovenstaand factuurnummer op IBAN NL07 RABO 0118 5882 49
+          </center>
+        invoice_footer_psychologist: >
+          Vrijgesteld van BTW op grond van art. 11 lid 1 art g.1a. <br>
+          Gaarne betaling onder vermelding van factuurnummer op rekening
+        general_practitioner: "Huisarts"
+        invoice: "Factuur"
+        total: "Totaalbedrag"
+        confidential: "Vertrouwelijk/Persoonlijk"
+        subject_label: "Betreft:"
+        subject: "Reguliere psychologische hulpverlening"
+        client_data: "Gegevens client:"
+        psychologist_data: "Gegevens psycholoog:"
+        referrer_data: "Gegevens verwijzer:"
+        psychologist_name: "Naam psycholoog:"
+        psychologist_practice_city: "Praktijkplaats:"
+        big: "BIG-registratienummer GZ:"
+        big_nip:  "BIG-reg. nr. GZ / Lidnr."
+        agb_code: "AGB code:"
+        financial_department: "Afd. financiële administratie"
+        financial_department_phone: "(020) 489 11 19"
+
+    full_error_messages_header:
+      errors_on_model:
+        one: "De volgende fout is gevonden bij deze %{model}"
+        other: "De volgende fouten zijn gevonden bij deze %{model}"
+
+  project_admin:
+    organisations:
+      index:
+        title: "Organisaties"
+        organisations: "Organisaties"
+        new: "Nieuwe"
+        new_company: "werkgever"
+        new_insurer: "verzekeraar"
+        new_organisation: "Nieuwe organisatie"
+        new_practice: "praktijk"
+        new_arbo: "arbo"
+        new_ric: "RIB"
+        export_csv: "CSV export Organisaties"
+        export_contacts_csv: "CSV export Contactpersonen"
+      new:
+        create_company: "Werkgever aanmaken"
+        create_insurer: "Verzekeraar aanmaken"
+        create_practice: "Praktijk aanmaken"
+        create_arbo: "Arbodienst aanmaken"
+        create_arbo: "Arbodienst aanmaken"
+        create_reintegration_center: "Reintegratiecentrum aanmaken"
+      edit:
+        update_company: "Werkgever bewerken"
+        update_insurer: "Verzekeraar bewerken"
+        update_practice: "Praktijk bewerken"
+        update_arbo: "Arbodienst bewerken"
+        update_reintegration_center: "Reintegratiecentrum bewerken"
+        update_cenzo_care: "Bewerken"
+      organisation:
+        edit: "bewerken"
+        delete: "verwijder"
+        confirm_delete: "Weet je zeker dat je deze organisatie wil verwijderen?"
+      tabs:
+        edit: "Organisatie data"
+        contacts: "Contactpersonen"
+        psychologists: "Psychologen"
+        contract: "Afspraken"
+        financial_data: "Financieel"
+        insurance_policies: "Polissen"
+      form:
+        department: "Afdeling"
+        contact: "Contactpersoon"
+      declaration:
+        title: "Nieuwe declaratie aanmaken voor verzekeraars"
+      insurer:
+        new_debit: 'Debet declaratie'
+        new_credit: 'Credit declaratie'
+
+    contracts:
+      product_header: &product_header
+        product: "Zorgproduct: %{product}"
+      index:
+        new_contract:
+          "Nieuwe projectafspraken"
+        confirm_delete:
+          "Weet u zeker dat u de projectafspraken voor dit zorgproduct wilt verwijderen?"
+      new:
+        <<: *product_header
+      edit:
+        <<: *product_header
+      show:
+        <<: *product_header
+
+    financial_data:
+      new:
+        create_financial_data: "Financiële data aanmaken"
+      edit:
+        edit_financial_data: "Financiële data bewerken"
+      form:
+        amount_hint: "invullen als 6,47"
+        performance_codes: "Prestatiecodebedragen"
+      index:
+        new_financial_data: "Financiële data aanmaken"
+
+    requests:
+      new:
+        request: "Aanmelding invoeren"
+      edit:
+        request: "Aanmelding wijzigen"
+      save:
+        error: "De aanmelding kon niet worden opgeslagen"
+      form:
+        receive_data: "Ontvangstgegevens"
+        processing: "Verwerking"
+        employer: "Werkgever"
+        requester: "Aanvrager"
+        referrer: "Doorverwijzer"
+        comment: "Notitie"
+        firstline: "Regulier traject"
+      show:
+        receive_data: "Ontvangstgegevens"
+        processing: "Verwerking"
+        employer: "Werkgever"
+        requester: "Aanvrager"
+    people:
+      index:
+        new_client: "Nieuwe cliënt"
+        new_psychologist: "Nieuwe psycholoog"
+        new_project_admin: "Nieuwe PA medewerker"
+      new:
+        create_client: "Cliënt aanmaken"
+        create_psychologist: "Psycholoog aanmaken"
+        create_project_admin: "PA medewerker aanmaken"
+      edit:
+        update_client: "Cliënt bewerken"
+        update_psychologist: "Psycholoog bewerken"
+        update_project_admin: "PA medewerker bewerken"
+
+    clients:
+      index:
+        title: "Cliënten"
+        clients: "Cliënten"
+        new: "Nieuwe cliënt"
+        name: "Naam"
+        number: "Nummer"
+        bsn: "Bsn"
+        birth_date: "Geboortedatum"
+        created_at: "Aangemeld op"
+        existing_treatment: "Laatste behandeling"
+        new_request: "Aanmelding invoeren"
+      edit:
+        confirm_delete: "Weet je zeker dat je deze cliënt wil verwijderen?"
+      new_treatment:
+        request: "Aanvraag invoeren"
+
+    ei_declarations:
+      index:
+        title: "Vecozo"
+        with_insurer: "Filter op verzekeraar"
+        and_state: "en declaratie status"
+        current: "Openstaande"
+      row:
+        voorlooprecord: "Voorlooprecord"
+        verzekerdenrecord: "Verzekerdenrecord"
+        prestatierecord: "Prestatierecord"
+        sluitrecord: "Sluitrecord"
+      new:
+        title: "Nieuwe EI Declaratie aanmaken"
+      form:
+        period: "Week van %{date}"
+        no_declarable_sessions: "Er kunnen momenteel geen %{type}-sessies gedeclareerd worden bij %{insurer}."
+      ei_declaration:
+        confirm_delete: "Weet u zeker dat u deze EI Declaratie wilt verwijderen?"
+
+    flatfile_lines:
+      show:
+        flatfile_line_for: "Flatfile regel %{line} voor %{name}"
+        vektis_codes: "Vektis fout codes"
+        vektis_code: "Code"
+        vektis_meaning: "Beschrijving"
+      index:
+        refresh: "Updaten"
+        return_file: "Ei retourbestand"
+      form_actions:
+        send_to_vecozo: "Verstuur huidige"
+        retrieve_validation: "Haal validatie op"
+        retrieve_state: "Haal status op"
+        credit_rows: "Crediteer regels"
+      vecozo_response:
+        regel_nummer: "RegelNummer %{line}"
+        begin_positie: "Beginpositie %{line}"
+        eind_positie: "Eindpositie %{line}"
+        rubriek_type: "Rubriek(Type) %{line}"
+        omschrijving: "Omschrijving %{line}"
+        record_type: "Record(Type)"
+        record_type_omschrijving: "Omschrijving"
+        foutcode: "FoutCode"
+        foutcode_omschrijving: "Omschrijving"
+        waarde_veld: "Waarde Veld %{line}"
+
+    contacts:
+      index:
+        new_contact: "Nieuwe contactpersoon"
+        invoice_data: "<strong>Let op!</strong> Er zijn nog geen factuurgegevens bekend voor deze organisatie. Vergeet niet de factuur gegevens in te vullen."
+        submit_invoice_data: "Factuur gegevens invullen"
+      new:
+        create_contact: "Nieuwe contactpersoon toevoegen"
+      edit:
+        edit_contact: "Contactpersoon wijzigen"
+      form:
+        select_roles: "Selecteer rollen"
+
+  invoice:
+    row:
+      descriptions:
+        fee:
+          all: "Marge voor Cenzo (11%)"
+          incidental: "Marge voor Cenzo (20%)"
+        session: "Sessie (uitgevoerd op: %{at})"
+        intake: "Intakegesprek (uitgevoerd op: %{at})"
+
+  people:
+    active: "Actief"
+    email: "e-mail"
+    phone: "Tel. nr"
+    mobile_phone: "Mobiel"
+    city: "Woonplaats"
+    function: "Functie"
+    personal: "Persoonlijk"
+    contact: "Contactgegevens"
+    account_options: "Accountopties"
+    sms_options: "SMS-notificaties"
+    auto_invoicing: "Automatisch factureren"
+    type:
+      client: "Cliënt"
+      psychologist: "Psycholoog"
+      project_admin: "PA medewerker"
+    name: "naam"
+    salutation_options:
+      sir: "de heer"
+      madam: "mevrouw"
+    titles_options:
+      drs: "drs."
+      dr: "dr."
+      mr: "mr."
+      ir: "ir."
+      ing: "ing."
+      msc: "MSc."
+    function: "functie"
+    function_options:
+      medical: "medisch"
+      casemanager: "casemanager"
+      human_resources: "HR"
+      financial: "financieel"
+      supervisor: "leidinggevend"
+      psych: "psycholoog"
+      client: "cliënt"
+      other: "overig"
+    department: "afdeling"
+    roles_options:
+      applicant: "Aanvrager"
+      referrer: "Doorverwijzer"
+      budget_holder: "Budgethouder"
+      billing: "Facturatie"
+      content_receiver: "Ontvanger inhoudelijke rapportage"
+      receiver_logistics_report: "Ontvanger logistieke rapportage"
+      receiver_annual_report: "Ontvanger jaarrapportage rapportage"
+      operational_contact: "Contactpersoon operationele zaken"
+      receiver_substantive_report: "Ontvanger substantief rapport"
+
+  organisations:
+    name: "naam"
+    organisation_type: "type"
+    level: "organisatieniveau"
+    contract_organisation: "contract organisatie"
+    type:
+      organisation: "Organisatie"
+      company: "Werkgever"
+      insurer: "Verzekeraar"
+      practice: "Praktijk"
+      arbo: "Arbo"
+      reintegration_center: "Reintegratiecentrum"
+      cenzo_care: ""
+    abbr_with_type:
+      company: "WG (Werkgever)"
+      insurer: "ZV (Zorgverzekeraar)"
+      practice: "PR (Praktijk)"
+      arbo: "AD (Arbodienst)"
+      reintegration_center: "RIB (Reintegratiebureau)"
+    abbr:
+      company: "WG"
+      insurer: "ZV"
+      practice: "PR"
+      arbo: "AD"
+    expiration: "Expiraties"
+    registrations: "Registraties"
+    contact_general: "Contact algemeen"
+    mailing_address: "Postadres"
+    visiting_address: "Bezoekadres"
+    billing_address: "Factuuradres"
+    invoicing: "Facturatie"
+    organisation_relations:
+      hoding: "Holding"
+      main_office: "Hoofdkantoor"
+      branch: "filiaal"
+      operating_company: "Werkmaatschappij"
+    method_of_submission_options:
+      care_code: "Zorgverlenerscode"
+      institution_code: "Instellingscode"
+      service_agency_code: "Servicebureaucode"
+      submit_legal: "Indienen rechtspersoon"
+    own_contribution_invoicing_to_options:
+      insurer: "Zorgverzekeraar"
+      client: "Cliënt"
+
+  organisation/arbo:
+    arbo_organisation_relation_options:
+      external: "Externe dienst"
+      internal: "Interne dienst"
+
+  psychologists:
+    first_line_via_cenzo_options:
+      all: "Alles"
+      incidental: "Incidenteel"
+
+  addresses:
+    address: "adres"
+    house_number: "huisnummer"
+    house_number_extension: "toevoeging"
+    city: "woonplaats"
+    country: "land"
+    zipcode: "postcode"
+    building_name: "gebouwnaam"
+    geo_location: "geo"
+
+  contacts:
+    initials: "naam"
+
+  contract:
+    template_name: "template naam"
+
+  manage:
+    employees:
+      index:
+        title: "Medewerkers"
+      index:
+        title: "Medewerkers"
+        new: "Medewerker toevoegen"
+      edit:
+        title: "Medewerker bewerken"
+      new:
+        title: "Medewerker aanmaken"
+
+    insurance_policies:
+      new:
+        header: "Polis aanmaken"
+      edit:
+        header: "Polis aanpassen"
+      show:
+        header: "Polis informatie"
+      index:
+        header: "Polissen"
+        new_insurance_policy: "Nieuwe polis"
+      form:
+        amount_hint: "Invullen als 6,47"
+        vecozo_codes_hint: "Invullen gescheiden door komma's"
+
+    psychologists:
+      tabs:
+        psychologist: "Psycholoog"
+        addresses: "Praktijkadressen"
+      form:
+        mailing_address: "Postadres"
+        private_address: "Privéadres"
+        service: "Periode franchise"
+        marshal: "Regiocoordinator"
+      index:
+        title: "Psychologen"
+        new: "Psycholoog toevoegen"
+        export_csv: "Export CSV"
+        undeclared_actions: "Ongedeclareerde acties"
+        marshals: "Regiocoordinatoren"
+      edit:
+        title: "Psycholoog bewerken"
+      new:
+        title: "Psycholoog aanmaken"
+
+    treatment_locations:
+      index:
+        new: "Adres toevoegen"
+      new:
+        title: "Adres toevoegen"
+      edit:
+        title: "Adres bewerken"
+      form:
+        address: "Adres"
+        unable_to_localise: "We konden dit adres niet localiseren, pas het aan en probeer het opnieuw."
+
+    contracts:
+      index:
+        title: "Afspraken templates"
+        new: "Afspraken template toevoegen"
+      new:
+        header: "Afspraken template aanmaken"
+        <<: *product_header
+      edit:
+        header: "Afspraken template bewerken"
+        <<: *product_header
+      contract:
+        confirm_delete: "Weet je zeker dat je deze afspraken template wil verwijderen?"
+
+  invitations:
+    create: "Account aanmaken"
+    password: "Wachtwoord"
+    invalid_token: "Deze uitnodiging is niet geldig (meer)"
+    accepted: "Uw account is aangemaakt."
+
+  treatment:
+    intakereport: "Intake"
+    timeschedulereport: "Tijdpad"
+    progressreport: "Voortgang"
+    finalreport: "Eind"
+    education_type_options:
+      ag: "AG"
+      gz: "GZ"
+    billing_address: "Postadres"
+    treatment_address: "Verblijfadres"
+    vecozo_address: "Vecozoadres"
+    requested_by_client: "De cliënt"
+    reffered_by_general_practitioner: "De huisarts"
+    received_by_options:
+      email: "E-mail"
+      fax: "Fax"
+      phone: "Telefoon"
+      online: "Online"
+    approval:
+      send_type_options:
+        email: "E-mail"
+        post: "Post"
+    invoice_info_unknown_task:
+      title: "Invoeren factuurinformatie aanmelding"
+      description: "De factuurinformatie voor een aanmelding van %{name} is nog niet ingevuld"
+
+  psychologist:
+    name: "naam"
+    email: "email"
+    address: "adres"
+    phone: "telefoon"
+
+  cov_check:
+    title: "COV Check"
+    check: "Voer de Controle Op Verzekeringsrecht uit"
+    results: "Resultaten van Vecozo"
+    vecozo_result: "Vecozo resultaat"
+    confirm_result_delete: "Bestaande COV-check-resultaten zullen verwijderd worden."
+    error: "De volgende Vecozo fout is opgetreden:"
+    copy_data_from_vecozo: "Kopieer naam van Vecozo"
+    result_id: "Selecteer cliënt"
+    personal: "Persoon"
+    address: "Adres"
+    insurance_info: "Verzekering informatie"
+    name: "Naam"
+    birth_date: "Geboortedatum:"
+    gender: "Geslacht:"
+    genders:
+      male: "Man"
+      female: "Vrouw"
+      unknown: "Onbekend"
+    bsn: "BSN:"
+    street: "Straatnaam"
+    house_number: "Nummer"
+    zip_code: "Postcode"
+    city: "Stad"
+    country: "Land"
+    insurance_name: "Verzekeraar"
+    start_date: "Ingangsdatum:"
+    end_date: "Einddatum:"
+    insurances: "Verzekeringen"
+    result_code: "Resultaatcode:"
+    uzovi_number: "Uzovinummer:"
+    insured_number: "Verzekerdennummer:"
+    insurance_type: "Soort verzekering:"
+    insurers_code: "Verzekerings code:"
+    result_codes:
+      c6400: "Niet geautoriseerd bij de aangegeven zorgverzekeraar"
+      c6401: "Niet gevonden, bij een of meer andere verzekeraars niet geautoriseerd"
+      c6402: "Niet gevonden, niet alle verzekeraars konden geraadpleegd worden"
+      c6404: "Aanvraag onvolledig of onjuist ingevuld"
+      c6407: "Meerdere personen gevonden, zoekgegevens niet uniek"
+      c6408: "Verzekering beëindigd"
+      c6409: "Actieve verzekering gevonden op de opgegeven peildatum"
+      c6412: "Actieve verzekering gevonden, verzekerdenummer is gewijzigd"
+      c6413: "Actieve verzekering gevonden, UZOVI-nummer is gewijzigd, verzekerdenummer is mogelijk ook gewijzigd"
+      c6415: "Niet gevonden"
+      c6416: "Zorgverzekeraar neemt niet deel aan COV"
+      c6417: "Peildatum valt niet binnen de toegestane periode"
+      c6418: "Actieve verzekering gevonden, niet alle verzekeraars konden geraadpleegd worden"
+      c6419: "BSN vaker gevonden bij zelfde of andere zorgverzekeraars"
+      c6420: "Persoon is overleden"
+    raw_data: "Ruwe Vecozo data:"
+    back_to_cov_check: "Terug naar de COV check"
+
+  insurance_policy:
+    name: "naam"
+    vecozo_codes: "Vecozo code(s)"
+    insurer: "verzekeraar"
+    reimburse_own_contribution: "vergoeding eigen bijdrage basis verzekering"
+    active_years: "actieve jaren"
+    price_per_session: "sessiebedrag aanvullende sessies"
+    maximum_supplement: "maximale aanvulling"
+    submit_by_client: "aanvullende verzekering indienen via cliënt"
+    price_per_session_type_options:
+      no_coverage: "geen dekking"
+      contracted_rate: "gecontracteerd tarief"
+      contracted_rate_excl_own_contribution: "gecontracteerd tarief excl. eigen bijdrage"
+      contracted_percentage: "x % gecontracteerd bedrag"
+      determined_rate: "bepaald tarief"
+    maximum_supplement_type_options:
+      no_coverage: "geen dekking"
+      maximum_amount: "maximaal x bedrag"
+      maximum_sessions: "maximaal aantal sessies"
+
+  financial_data:
+    year: "jaar"
+    method_of_submission: "wijze van indienen"
+    uzovi_number: "Uzovi"
+
+  approval:
+    send_type: "verstuur met"
+    approval_to_id: "voor akkoord aan"
+    notice_to_id: "ter kennisgeving aan"
+    copy_of_notice_to_id: "extra kennisgeving aan"
+    assignment_confirmation_to_id: "opdrachtbevestiging aan"
+
+  treatment/actions:
+    show: "Afgehandeld"
+    no_show: "Niet op komen dagen"
+    cancelled: "Afgebeld"
+
+  treatment/session_request:
+    trajectory_section_options:
+      incomplete_trajectory: "Onvolledig behandeltraject"
+      per_session: "Per sessie"
+      intake_with_short_trajectory: "Behandeltraject Kort"
+      intake_with_medium_trajectory: "Behandeltraject Middel"
+      intake_with_intensive_trajectory: "Behandeltraject Intensief"
+      intake_with_long_term_trajectory: "Behandeltraject Chronisch"
+      transition_trajectory: "Transitie traject"
+      mindfulness: "Mindfulness"
+      extend: "Verlenging"
+      intake: "Intake"
+      light: "Licht"
+      light_to_intensive: "Overgang van licht naar intensief"
+      intensive: "Intensief"
+      quick_scan: "Quickscan"
+      three_interview: "Driegesprek"
+      first_line: "Regulier"
+      mindfulness: "Mindfulness"
+
+  treatment/insurance:
+    insurance:
+      end_date_required: "Einddatum verplicht"
+
+  psych:
+    nav:
+      financial: "Financieel"
+      treatments: "Behandelingen"
+      organisations: "Organisaties"
+    title: "Psycholoog kiezen"
+    regular_psychs: "Vaste psychologen"
+    search: "Andere psycholoog zoeken"
+    session_requests:
+      requested: "De verlenging is aangevraagd"
+      new:
+        title: "Verlenging aanvragen"
+    treatments:
+      title: "Behandeling"
+      for: "voor"
+      show:
+        cov_check: "COV Check"
+        psychologists: "Psycholoog"
+        not_filled_in: "Nog niet ingevuld"
+        not_performed: "Nog niet uitgevoerd"
+        not_added: "Nog niet toegevoegd"
+        not_selected: "Nog niet geselecteerd"
+        base_data: "Invoeren"
+        addresses: "Adressen"
+        employer: "Werkgever"
+        contract: "Afspraken"
+        budget: "Budget"
+        approval: "Offerte"
+        submit_contract_data: "Afspraken invullen"
+        session_requests: "Sessieaanvragen"
+      budget:
+        title: "Budget"
+      attachments:
+        files: "Bestanden"
+        filename: "Bestandsnaam"
+        created_at: "Toegevoegd op"
+    new_client_forms:
+      sent: "Aanmelding voor %{name} is verzonden"
+      send_failure: "Verzending mislukt!"
+
+    declarations:
+      created: "Factuur aangemaakt met nummer <strong>%{number}</strong>"
+      created_with_foreign_number: "Factuur aangemaakt met nummer <strong>%{number}</strong>, eigen kenmerk <strong>%{foreign_number}</strong>"
+      fail: "Selecteer tenminste één sessie"
+      index:
+        title: "Gedeclareerde facturen"
+        no_declarations_yet: "Er zijn nog geen declaraties ingediend, klik op 'Nieuwe declaraties indienen' om de eerste declaratie in te dienen."
+        invoices: "Facturen"
+        new: "Nieuwe declaraties indienen"
+        unpaid: "Ingediende declaraties"
+        paid: "Uitbetaalde declaraties"
+      show:
+        title: "Factuur nummer %{number}"
+        back: "Terug naar het overzicht"
+      new:
+        title: "Sessies declareren"
+        from_to: "Van %{from} tot %{to}"
+        all_sessions_have_been_declared: "Op dit moment zijn al uw uitgevoerde sessies gedeclareerd."
+        back: "Terug naar facturenoverzicht"
+      declaration:
+        treatment:
+          session_requests:
+            first:
+              #trajectory_section:
+                quick_scan: "Quick_Scan"
+                intake: "Intake"
+        incomplete_trajectory: "Onvolledig behandeltraject"
+        per_session: "Op sessiebasis"
+        transition_trajectory: "Transitietraject"
+        quick_scan: "Quickscan"
+        intake: "Intake"
+        intake_with_short_trajectory: "Behandeltraject Kort"
+        intake_with_medium_trajectory: "Behandeltraject Middel"
+        intake_with_intensive_trajectory: "Behandeltraject intensief"
+        intake_with_long_term_trajectory: "Behandeltraject Chronisch"
+        three_interview: "Driegesprek"
+        mindfulness: "Mindfulness"
+        dbc_based: "Behandeltraject "
+        intake: "Intakegesprek "
+        extend: "Verlenging"
+        #intake: "Intakegesprek (uitgevoerd op: %{at})"
+        session: "Sessie (uitgevoerd op: %{at})"
+        regression_prevention: "Terugvalpreventie (uitgevoerd op: %{at})"
+        description: "Omschrijving"
+        foreign_number: "Uw kenmerk"
+        submit: "Declareren"
+        has_declarable_actions_in_later_years: "Bovenstaande sessies uit deze behandeling moeten gedeclareerd worden voordat sessies uit een later jaar te gedeclareerd kunnen worden"
+    organisations:
+      mailing_address: "Postadres"
+      visiting_address: "Bezoekadres"
+      contact_persons: "Contactpersonen"
+      contact_person:
+        name: "Naam"
+        function_category: "Functiecategorie"
+        function_name: "Functienaam"
+        department: "Afdeling"
+        phone: "Tel."
+        email: "E-mail"
+    actions:
+      due_at: "Ingepland op: %{date_time}"
+      title: "Behandeling"
+      forms:
+        three_interview:
+          title: "Driegesprek"
+        quick_scan:
+          title: "Quickscan"
+        intake:
+          title: "Intakegesprek"
+          intake: "Intakegesprek"
+        initial_contact:
+          title: "Initieel contact"
+          client_data: "Cliënt data"
+        session:
+          title: "Sessie"
+        report_bz: &headers_report_bz
+          work_resumation: "Werkhervatting"
+          work_resumation_estimate: "Inschatting verloop van de werkhervatting  "
+          burden: "Belastbaarheid"
+          advise: "Overige Adviezen"
+          notes: "Opmerkingen"
+          conclusions: "Conclusies"
+        intake_report:
+          <<: *headers_report_bz
+          title: "Intakerapportage"
+          duration: "Verwachte doorlooptijd"
+          problem_description: "Klachtgegevens"
+          treatment_target: "Plan van aanpak/Behandelplan"
+          recovery_barriers: "Belemmeringen"
+          logistics: "Logistieke gegevens"
+        intake_report_vgz_iza:
+          title: "Intakerapport VGZ-IZA"
+          attendance: "Aanmeldingsgegevens"
+          intake_data: "Intakegegevens"
+          complaint_data: "Klachtgegevens"
+          treatment_process: "Inhoud behandeltraject"
+        time_schedule_report:
+          <<: *headers_report_bz
+          title: "Tijdpadrapportage"
+          duration: "Verwachte doorlooptijd"
+          logistics: "Logistieke gegevens"
+        time_schedule_report_vgz_iza:
+          title: "Tijdpadrapportage VGZ-IZA"
+          duration: "Doorlooptijd"
+          work_resumation: "Werkhervatting"
+          estimate_work_resumation: "Inschatting verloop van de werkhervatting"
+          estimate_taxability: "Inschatting van de belastbaarheid"
+          advise: "Mogelijkheden/adviezen ten aanzien van de werkhervatting"
+          notes: "Notities"
+        final_report:
+          <<: *headers_report_bz
+          title: "Eindrapportage"
+          work_resumation: "Werkhervatting"
+          burden: "Belastbaarheid"
+          duration: "Verwachte doorlooptijd"
+          treatment_timeline: "Tijdspad behandeling"
+          treatment_result: "Resultaat behandeling"
+          treatment_is: "Behandeldoelstelling"
+          treatment_effect: "Effect behandeling"
+        final_report_vgz_iza:
+          title: "Afsluitrapportage VGZ-IZA"
+          attendance: "Aanmeldingsgegevens"
+          closing_data: "Afsluitgegevens"
+        progress_report:
+          <<: *headers_report_bz
+          title: "Voortgangsrapportage"
+          treatment_timeline: "Tijdspad behandeling"
+          treatment_progress: "Voortgang behandeling "
+          treatment_objective: "Behandeldoelstelling"
+          recovery_barriers: "Belemmeringen en/of instandhoudende factoren m.b.t. herstel"
+        periodical_report:
+          title: "Voortgangsrapportage"
+          treatment_course: "Verloop behandeling"
+          treatment_progress: "Voortgang behandeling"
+          reintegration: "Werkhervatting"
+        regression_prevention:
+          title: "Terugvalpreventie"
+        dsm4_diagnosis:
+          title: "DSM-IV-TR diagnose"
+          axis_1: "As 1"
+          axis_2: "As 2"
+          axis_3: "As 3"
+          axis_4: "As 4"
+          axis_5: "As 5"
+        dsm5_diagnosis:
+          title: "DSM-5 diagnose"
+        general_practitioner_report:
+          title: "Huisarts Rapport"
+          general_practitioner: "Huisarts"
+          complaint: "Klacht"
+          scl_90_scores: "SCL 90 scores"
+          treatment: "Behandeling"
+        permission: &permission
+          title: "Toestemmingsformulier"
+          dsm_iv: "DSM-IV-TR"
+        permission_bz: &permission_bz
+          <<: *permission
+          reports: "Toestemming met rapportages naar"
+          medical_substantive_information: "Toestemming met medisch inhoudelijke informatie naar"
+          logistical_information: "Toestemming met logistiek informatie naar"
+        permission_bz_vgz_iza:
+          <<: *permission_bz
+          vgz_iza: "VGZ-IZA"
+  arbo:
+    treatments:
+      title: "Behandeling"
+      for: "voor"
+      index:
+        title: "Behandelingen"
+        number: "Nummer"
+        name: "Naam"
+        bsn: "BSN"
+        birth_date: "Geboortedatum"
+        created_at: "Aangemaakt op"
+      treatment:
+        show: "Bekijken"
+
+  treatment/actions/report_bz: &report_bz
+    duration_options:
+      short: "Kort"
+      medium: "Middel"
+      intensive: "Intensief"
+      insured_treatment: "GBGGZ"
+      non_insured_treatment: "Niet verzekerde psychische problematiek"
+      specialized_treatment: "SGGZ"
+    logistics_options:
+      ok: "Ja"
+      no_client: "Nee, cliënt"
+      no_other: "Nee, anders"
+    absenteeism_options:
+      fully: "volledig"
+      partially: "gedeeltelijk"
+      none: "geen"
+    burden_type_options:
+      none: "geen"
+      minimal: "minimaal"
+      partial: "gedeeltelijk"
+      full: "volledig"
+    burden_approach_options:
+      supporting: "ondersteunende"
+      stimulation: "stimulerende"
+      inhibiting: "afremmende"
+    continued_work_options:
+      no_absenteeism: "cliënt heeft niet verzuimd"
+      fully: "volledig hervat"
+      partially: "deels hervat"
+      not: "niet hervat"
+    work_resumation_is_part_of_treatment_options:
+      goal: "doelstelling van de behandeling"
+      no_goal: "geen doelstelling van de behandeling"
+    hints:
+      contact_at: "Invullen als: xx om xx uur"
+      contactable_at: "Invullen als: xx tussen xx uur en xx uur"
+    recovery_barrier_options:
+      none: "geen"
+      limited: "beperkte"
+      alot: "veel"
+  treatment/actions/intake_report:
+    <<: *report_bz
+  treatment/actions/intake_report_vgz_iza:
+    access_times_not_met_options:
+      on_request_of_client: "opverzoek van cliënt"
+      other: "anders"
+    hindrance_in_execution_of_work_options:
+      none: "geen"
+      few: "weinig"
+      many: "veel"
+  treatment/actions/final_report:
+    <<: *report_bz
+    successful_options:
+      successful: "succesvol afgerond"
+      terminated: "voortijdig beëindigd"
+    reason_for_termination_options:
+      both: "in onderling overleg beëindigd"
+      client: "eenzijdig door de cliënt beëindigd"
+      psychologist: "door de psycholoog beëindigd"
+    treatment_goal_options:
+      completed: "is gehaald"
+      partially_completed: "is deels gehaald"
+      not_completed: "is niet gehaald"
+    after_completion_options:
+      further_care: "verdere zorg nodig"
+      no_care: "geen verdere zorg nodig"
+    resumes_at_options:
+      own_work_own_employer: "eigen werk bij eigen werkgever"
+      other_work_own_employer: "ander werk bij eigen werkgever"
+      own_work_other_employer: "eigen werk bij andere werkgever"
+      other_work_other_employer: "ander werk bij andere werkgever"
+    dsm_iv_changed_options:
+      the_same: "achteraf juist gebleken"
+      changed: "anders gebleken"
+  treatment/actions/final_report_vgz_iza:
+    treatment_prematurely_ended_by_options:
+      client: "cliënt"
+      caregiver: "zorgverlener"
+      together: "gezamelijk"
+      other: "anders"
+    treatment_prematurely_ended_by_reason_options:
+      no_deduplicate: "wenst niet te ontdubbelen"
+      other: "anders"
+    target_intervention_achieved_options:
+      'yes': "ja"
+      partially: "gedeeltelijk"
+      'no': "nee"
+    hindrance_in_execution_of_work_options:
+      none: "geen"
+      few: "weinig"
+      many: "veel"
+  treatment/actions/time_schedule_report:
+    <<: *report_bz
+  treatment/actions/time_schedule_report_vgz_iza:
+    absenteeism_options:
+      fully: "volledig"
+      partially: "gedeeltelijk"
+      none: "niet"
+    treatment_goal_options:
+      goal: "mede doelstelling van de behandeling"
+      no_goal: "geen doelstelling van de behandeling"
+    taxability_estimate_options:
+      none: "niet"
+      minimal: "minimaal"
+      partially: "gedeeltelijk"
+      fully: "volledig"
+    approach_needed_options:
+      supporting: "ondersteunende"
+      stimulating: "stimulerende"
+      inhibitory: "afremmende"
+    hints:
+      contact_at: "Invullen als: xx om xx uur"
+      contactable_at: "Invullen als: xx tussen xx uur en xx uur"
+  treatment/actions/progress_report:
+    <<: *report_bz
+    progress_since_intake_options:
+      relapse: "terugval"
+      progress: "vooruitgang"
+      equal: "gelijk gebleven situatie"
+    treatment_objective_options:
+      maintained: "blijft gehandhaafd"
+      changed: "is aangepast"
+  treatment/actions/periodical_report:
+    progress_options:
+      progress: "vooruitgang"
+      relapse: "terugval"
+      unchanged: "gelijk gebleven situatie"
+    target_achieved_options:
+      "yes": "ja"
+      partially: "gedeeltelijk"
+      "no": "niet"
+    absenteeism_options:
+      "yes": "ja"
+      "no": "nee"
+    reintegration_state_options:
+      continued: "hervat"
+      partially_continued: "gedeeltelijk hervat"
+      stopped: "nog niet hervat"
+    absenteeism_state_options:
+      fully: "geheel"
+      partially: "gedeeltelijk"
+      more: "meer"
+    reintegration_expectation_options:
+      good: "goed"
+      moderate: "matig"
+      bad: "niet goed"
+    reintegration_position_options:
+      own_position: "eigen werk bij eigen werkgever"
+      other_position: "ander werk bij eigen werkgever"
+      own_position_other_employer: "eigen werk bij andere werkgever"
+      other_position_other_employer: "ander werk bij andere werkgever"
+  treatment/actions/dsm4_diagnosis:
+    somatic_disorder_options:
+      'nil': "geen somatische aandoening"
+      'false': "Een somatische aandoening die niet van belang is voor de behandeling"
+      'true': "Een somatische aandoening die van belang is voor de behandeling"
+
+  reports:
+    notice_of_meeting:
+      one: "Wij hebben uw aanmelding ontvangen voor psychologische zorg en laten u hierbij weten dat u een afspraak kunt maken met de volgende psycholoog:"
+      two: "HIER MOET HET TUSSENDEEL KOMEN"
+      three: "Wij verzoeken u om binnen 3 werkdagen telefonisch contact op te nemen met de psycholoog om een afspraak
+       voor het intakegesprek te maken. Deze afspraak zal binnen 5 à 7 werkdagen in overleg met u worden ingepland.
+       \n\nIn de bijlage treft u aanvullende informatie over Cenzo en een toestemmingsformulier. U wordt
+       vriendelijk verzocht deze informatie door te nemen en het toestemmingsformulier ingevuld en ondertekend mee
+       te nemen naar uw eerste afspraak.\n\nAls u om welke reden dan ook geen gebruik wilt maken van dit
+       zorgtraject dan verzoeken wij u dit aan onze administratie door te geven. Wij zijn te bereiken op
+       nummer 020 - 344 50 46."
+
+  incomplete_trajectory: "Onvolledig behandeltraject"
+  mindfulness: "mindfulness"
+  quick_scan: "Quickscan"
+  intake: "Intake"
+  per_session: "Op sessiebasis"
+  intake_with_short_trajectory: "Behandeling Kort"
+  intake_with_medium_trajectory: "Behandeling Middel"
+  intake_with_intensive_trajectory: "Behandeling Intensief"
+  intake_with_long_term_trajectory: "Behandeling Chronisch"
+  extend: "Verlenging van behandeling"
+  three_interview: "Driegesprek"
+  transition_trajectory: "Transitie"
+  first_line: "Regulier"
+  mindfulness: "Mindfulness"
+  cost_center: "Kostenplaats"
+  case_number: "Zaaknummer"
+  intervention_number: "Interventienummer"
+  other: "Referentie"
+  employee_number: "Personeelsnummer"
+  manager: "Manager"
+  department: "Afdeling"
+  po_number: "PO nummer"
+  function_type: "Functie-type"
+  diagnosis_code_psypol: "Diagnosecode Psypol"
+  log:
+    archive: "Archiveren"
+
+  dbc_based:
+    performance_codes:
+      '70030': "Regulier individueel psychologisch consult"
+      '70031': "Dubbel regulier individueel psychologisch consult"
+      '70032': "Niet nagekomen afspraak"
+      '70033': "E-mail consult"
+      '70034': "Telefonisch consult"
+      '70037': "Driegesprek"
+
+  dbc:
+    performance_codes:
+      '70030': "Regulier individueel psychologisch consult"
+      '70031': "Dubbel regulier individueel psychologisch consult"
+
+  motd:
+    title: "Mededeling"
+    save: "Opslaan"
+  motds:
+    index:
+      title: "Mededelingen"
+      destroy: "Verwijder"
+      new: "Nieuw"
+      show: "Bekijk"
+      edit: "Bewerk"
+    edit:
+      title: "Bewerk mededeling"
+    show:
+      title: "Mededeling"
+  rejected: "Afgewezen"
+  approved: "Akkoord"
+  sent: "Offerte verzonden"
+  corrected: "Offerte niet verstuurd"
+  requested: "Aangevraagd"
+  no_key: "Onbekend"
+  not_set: "Onbekend"
+
+  summary:
+    cenzo: "Cenzo"
+    client: "Client"
+    false: "Nee"
+    true: "Ja"
+    none: "Geen"
+    all: "Alle"
+    base: "Basis"
+    standard: "Standaard"
+    none: "Geen"
+    intake: "Intake"
+    intake_with_short_trajectory: "Kort"
+    intake_with_medium_trajectory: "Middel"
+    intake_with_intensive_trajectory: "Intensief"
+    e-mail: "E-mail"
+    mail: "Post"
+    trajectory: "Behandeltraject"
+    webform: "Webformulier"
+    three_interview: "Driegesprek"
+    arbo: "Arbocentrum"
+    reintegration_center: "Reintegratiecentrum"
+    referrer: "Verwijzer"
+    applicant: 'Aanvrager'
+    receiver_substantive_report: "Ontvanger inhoudelijke rapportage"
+    receiver_logistics_report: "Ontvanger logistieke rapportage"
+    client_contacts_psychologist: "Client neemt contact met psycholoog op"
+    psychologist_contacts_client: "Psycholoog neemt contact met client op"
+    fixed_fee: "Vaste prijs"
+    session_tariff_bz: "Sessietarief BZ"
+    intensive_process: "Intensief traject"
+    copz_tariff_intake: "COPZ tarief intake"
+    copz_tariff_treatment: "COPZ tarief behandeling"
+    copz_tariff_treatment_and_copz_margin_arbo_treatment: "COPZtarief behandeling + COPZmarge Arbo behandeling"
+    value_must_be_shown: "Invulbaar bedrag"
+    double_session: "Twee intakes"
+    intake_report: "Intakerapportage"
+    timetable_report: "Tijdpadrapportage"
+    final_report: "Eindrapportage"
+    final_evaluation: "Eindverslag"
+    phone: "Telefoon"
+    insurer: "Verzekeraar"
+    function_type:  "Functietype"
+    diagnosis_code_psypol: "Diagnosecode Psypol"
+    budget_holder: "Budgethouder"

@@ -1,0 +1,57 @@
+development:
+  clients:
+    default:
+      database:  <%= ENV.fetch('MONGOID_DATABASE') %>
+      hosts:
+        - <%= ENV.fetch('DATABASE_HOST') %>
+      options:
+        consistency: strong
+        safe: true
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false
+
+
+test:
+  clients:
+    default:
+      database: <%= ENV.fetch('MONGOID_TEST_DATABASE') %>
+      hosts:
+        - <%= ENV.fetch('DATABASE_HOST') %>
+      options:
+        safe: false
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false
+
+
+staging:
+  clients:
+    default:
+      database: <%= ENV.fetch('MONGOID_STAGING_DATABASE') %>
+      hosts:
+        - <%= ENV.fetch('DATABASE_HOST') %>
+      options:
+        consistency: strong
+        safe: true
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false
+
+
+production:
+  clients:
+    default:
+      database: <%= ENV.fetch('MONGOID_PRODUCTION_DATABASE') %>
+      hosts:
+        - <%= ENV.fetch('DATABASE_HOST') %>
+      options:
+        consistency: strong
+        safe: true
+  options:
+    use_utc: false
+    use_activesupport_time_zone: true
+    raise_not_found_error: false

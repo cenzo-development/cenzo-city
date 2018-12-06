@@ -1,0 +1,36 @@
+.absolute-center {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.login-page {
+  background:  url(<%= asset_path "cenzo-pattern.png" %>) #f3f6f8 no-repeat bottom 30% right -20%;
+}
+
+.login-page .footer {
+  left:0;
+  text-align: center!important;
+  border:none;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  margin: 0 auto;
+  padding:1rem 3rem 2rem 3rem;
+  box-shadow: 0 0 24px 0 rgba(0,0,0,0.06), 0 1px 0 0 rgba(0,0,0,0.02);
+}
+
+.login-page a  {
+  color: #2b2e83!important;
+}
