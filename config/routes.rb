@@ -10,10 +10,31 @@ Rails.application.routes.draw do
   get '/support' => 'information#support_info', as: 'support'
   get '/register' => 'information#register_info', as: 'register'
 
+  get '/psych_client/new' => 'psych_client#new', as: 'new_psych_client'
+  post '/psych_client/new' => 'psych_client#create', as: 'create_psych_client'
+
+  #get 'clients/search' => 'clients#search', as: 'search_clients'
+  get 'clients/not_found' => 'clients#not_found', as: 'client_not_found'
+
+  get 'misc/address' => 'misc#check_address'
+
+
+  root to: 'dashboard#index'
 
   resources :sessions, only: [:new]
   resources :dashboard, only: [:index]
   resources :password_resets, only: [:new, :create, :edit, :update]
 
-  root to: 'dashboard#index'
+  resources :clients, only: [:index, :show, :edit] do
+    member do
+      patch :edit, action: :update, as: 'update_edit'
+    end
+    collection do
+      post :index, action: :search, as: 'search_index'
+    end
+  end
+
+  resources :organisations
+
+
 end

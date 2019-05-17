@@ -29,11 +29,17 @@ gem 'bootstrap'
 
 gem 'bcrypt', '~> 3.1.7'
 
- gem 'values', '~> 1.8.0'
+gem 'values', '~> 1.8.0'
 
  gem "figaro"
+ gem 'geocoder'
+
+
+ gem "will_paginate_mongoid"
+ gem 'will_paginate-bootstrap4'
 
  gem "mongoid_rails_migrations"
+ gem 'mongoid-autoinc'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -79,7 +85,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'database_cleaner'
+  gem 'database_cleaner', '1.0.0.RC1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= render 'layouts/doc-head' %>
+    <%=render "shared/postcodeapi"%>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,10 +14,19 @@
 
   <body>
 
+<div id="wrapper">
+
+  <!-- sidemenu include -->
+  <% non_layout_paths = %w(/sessions/new /passcode/confirm /passcode/enter /support /register /password_resets/new /password_resets)%>
+  <% unless non_layout_paths.include?(request.path) %>
+  <%= render 'layouts/left-sidebar' %>
+  <% end %>
+
+
+  <div class="content-page">
     <% non_layout_paths = %w(/sessions/new /passcode/confirm /passcode/enter /support /register /password_resets/new /password_resets)%>
     <% unless non_layout_paths.include?(request.path) %>
     <%= render 'layouts/top-bar' %>
-    <%= render 'layouts/left-sidebar' %>
     <% end %>
 
     <div class="flash-container" >
@@ -26,5 +36,12 @@
     </div>
 
     <%= yield %>
+
+  </div>
+  <!-- /.content-page -->
+
+</div>
+<!-- /#wrapper -->
+
   </body>
 </html>

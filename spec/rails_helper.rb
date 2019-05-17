@@ -1,9 +1,10 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 
 require 'spec_helper'
-require 'support/controller_helpers'
 
 ENV['RAILS_ENV'] ||= 'test'
+require 'support/controller_helpers'
+#require 'database_cleaner'
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
@@ -50,19 +51,26 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
 =begin
   config.before(:suite) do
-    DatabaseCleaner.orm = :mongoid
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.start
+    DatabaseCleaner[:mongoid].strategy = :truncation
+    #DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner[:mongoid].start
   end
 
   config.after(:each) do
-    DatabaseCleaner.clean
+    DatabaseCleaner[:mongid].clean
   end
+
 =end
 
+
 end
+
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

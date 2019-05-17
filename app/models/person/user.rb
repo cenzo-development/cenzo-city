@@ -7,6 +7,7 @@ class Person::User < Person
   field :password_digest, type: String
   field :password_reset_token, type: String
   field :password_reset_sent_at, type: Time
+  field :role, type: String
 
   has_secure_password
 

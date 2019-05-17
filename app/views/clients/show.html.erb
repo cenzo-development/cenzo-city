@@ -1,0 +1,156 @@
+
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <div class="page-title-box">
+                            <span class="h4 page-title">Clients </span>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="clients.html">Clients</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><%=@client_presenter.client_name%></li>
+                            </ol>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-box">
+
+                                    <h1><%=@client_presenter.client_name%></h1>
+
+                                    <div class="row mx-0 pt-3 border">
+                                        <div class="col-md-4">
+
+
+                                            <ul class="list-unstyled list-split-item">
+                                                <li><strong>Name: </strong><%=@client_presenter.client_name%></li>
+                                                <li><strong>Number: </strong><%=@client_presenter.client_number%></li>
+                                                <li><strong>BSN: </strong><%=@client_presenter.client_bsn%></li>
+                                                <li><strong>Birthdate: </strong><%=@client_presenter.client_dob%></li>
+                                                <!--<li><strong>Logged On </strong> 11-05-2018</li>-->
+                                            </ul>
+                                        </div>
+                                        <!-- /.col-md-4 -->
+                                        <div class="col-md-4">
+                                                <ul class="list-unstyled list-split-item">
+                                                        <li> <strong>Address: </strong><%=@client_presenter.client_address.first%></li>
+                                                        <li> <strong>House Number: </strong><%=@client_presenter.client_address[1]%></li>
+                                                        <li> <strong>Post Code: </strong><%=@client_presenter.client_address.last%></li>
+                                                        <li> <strong>Place: </strong><%=@client_presenter.client_address[2]%></li>
+
+                                                    </ul>
+                                        </div>
+                                        <!-- /.col-md-4 -->
+                                        <div class="col-md-4">
+                                                <ul class="list-unstyled list-split-item">
+                                                        <li> <strong>Work Phone: </strong><%=@client_presenter.client_work_phone%></li>
+                                                        <li> <strong>Home Phone: </strong><%=@client_presenter.client_home_phone%></li>
+                                                        <li> <strong>Mobile Phone: </strong><%=@client_presenter.client_mobile_phone%></li>
+                                                        <li> <strong>Email: </strong><%=@client_presenter.client_email%></li>
+                                                    </ul>
+                                        </div>
+                                        <!-- /.col-md-4 -->
+                                    </div>
+                                    <!-- /.row -->
+
+                                    <div class="row mt-3 mb-5">
+                                            <div class="col">
+                                              <%=link_to "Edit Client", edit_client_path(@client_presenter), class: "btn btn-secondary btn-sm"%>
+                                            </div>
+                                            <!-- /.col -->
+                                        </div>
+                                        <!-- /.row -->
+
+                                    <h3>Recent Treatments</h3>
+                                    <div class="table-responsive">
+                                            <table class="table table-hover table-centered table-striped m-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Status</th>
+                                                        <th>Soort</th>
+                                                        <th>Verzekersar</th>
+                                                        <th>Verzekerdenummer</th>
+                                                        <th>Uzovt</th>
+                                                        <th>Ingangsdatum</th>
+                                                        <th>Einddatum</th>
+                                                        <th class="text-center"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>12345</td>
+                                                        <td>00000000</td>
+                                                        <td>00000000</td>
+                                                        <td>00-00-0000</td>
+                                                        <td>00-00-0000</td>
+                                                        <td>00-00-0000</td>
+                                                        <td>00-00-0000</td>
+                                                        <td><a href="#" class="btn btn-sm btn-link"><i class="fa fa-pencil"></i> Edit</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td>12345</td>
+                                                            <td>00000000</td>
+                                                            <td>00000000</td>
+                                                            <td>00-00-0000</td>
+                                                            <td>00-00-0000</td>
+                                                            <td>00-00-0000</td>
+                                                            <td>00-00-0000</td>
+                                                            <td><a href="#" class="btn btn-sm btn-link"><i class="fa fa-pencil"></i> Edit</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>12345</td>
+                                                                <td>00000000</td>
+                                                                <td>00000000</td>
+                                                                <td>00-00-0000</td>
+                                                                <td>00-00-0000</td>
+                                                                <td>00-00-0000</td>
+                                                                <td>00-00-0000</td>
+                                                                <td><a href="#" class="btn btn-sm btn-link"><i class="fa fa-pencil"></i> Edit</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>12345</td>
+                                                                    <td>00000000</td>
+                                                                    <td>00000000</td>
+                                                                    <td>00-00-0000</td>
+                                                                    <td>00-00-0000</td>
+                                                                    <td>00-00-0000</td>
+                                                                    <td>00-00-0000</td>
+                                                                    <td><a href="#" class="btn btn-sm btn-link"><i class="fa fa-pencil"></i> Edit</a></td>
+                                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /.table-responsive -->
+                                        <%=form_with url: clients_path, method: "get", local: true do |form|%>
+                                        <div class="row mt-3">
+                                                <div class="col">
+                                                  <%=form.submit "Back", class: "btn btn-secondary btn-lg mr-3", type: 'submit'%>
+                                                  <!--<button type="button" class="btn btn-secondary btn-lg mr-3">Back</button>-->
+                                                  <button type="button" class="btn btn-primary btn-lg">Add Treatment</button>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <%end%>
+                                            <!-- /.row -->
+                                </div>
+                                <!-- /.card-box -->
+
+                            </div>
+                            <!-- /.col-lg-12 -->
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+
+                <!-- ========== boilerplate========== -->
+                <%= render "layouts/shared/boilerplate" %>
+                <!-- boilerplate End -->
+
+
+
+
+            <!-- ============================================================== -->
+<!-- End Right content here -->

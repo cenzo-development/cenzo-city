@@ -21,7 +21,7 @@ RUN gem install rubygems-update
 RUN update_rubygems
 RUN gem update --system
 
-RUN bundle install
+RUN bundle install -V
 
 COPY . /usr/src/cenzo-city
 

@@ -7,4 +7,14 @@ module ApplicationHelper
     when 'alert' then "alert alert-warning"
     end
   end
+
+
+  def set_value(errors, resource, field_name, field_value)
+    if errors.blank? || !resource.errors[field_name]
+      return field_value
+    else
+      resource.send(field_name) if resource.errors[field_name]
+    end
+  end
+
 end

@@ -10,7 +10,7 @@ class Person
   field :mid_name, type: String
   field :last_name, type: String
   field :name, type: String
-  field :phone, type: String
+  #field :phone, type: String
   field :mobile_phone, type: String
   field :email, type: String
   field :active, type: Boolean, default: false
@@ -18,10 +18,10 @@ class Person
   field :location, type: String
 
 
-  embeds_one :address, class_name: 'Address'
+  #embeds_one :address, class_name: 'Address'
 
   index _type: 1
-  index name: 1   
+  index name: 1
 
 
 end

@@ -5,12 +5,13 @@ class PasswordResetContext
   end
 
   def initialize(user_email)
-      @user = Person::User.find_by(email: user_email)
+    if @user = Person::User.find_by(email: user_email)
       assign_password_reset(@user)
+    end
   end
 
   def call
-    if @user
+    if !@decorated_object.nil
       @decorated_object.send_password_reset
       @decorated_object.run_hook :after_send_password_reset
     else

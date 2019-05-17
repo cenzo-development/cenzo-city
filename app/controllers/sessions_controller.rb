@@ -2,7 +2,7 @@
 
 class SessionsController < ApplicationController
 
-  rescue_from Mongoid::Errors::DocumentNotFound do |e|
+  rescue_from StandardError do |e|
     show_message(:error, "you have entered an incorrect email and password combination", :now => true, :object => self, :action => :new)
     #send_file(Rails.root.join('public', '404.html'), type: 'text/html; charset=utf-8', status: 404)
   end
