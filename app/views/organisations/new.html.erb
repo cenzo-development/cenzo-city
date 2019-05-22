@@ -21,7 +21,7 @@
 
                      <div class="row">
                          <div class="col-md-8">
-                            <%= form_with url: create_psych_client_path,  model: @forms_client_create, local: true do |form| %>
+                            <%= form_with url: create_new_organisation_path(@forms_client_create.id),  model: @forms_organisation_create, local: true do |form| %>
 
                                  <fieldset>
                                      <div class="row mb-3">
@@ -94,9 +94,8 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group mr-3">
-                                                 <label for="chamberCommerce" class="">Chamber of Commerce</label>
-                                                 <input id="chamberCommerce" type="text" class="form-control"
-                                                     maxlength="4" size="4" placeholder="" value="">
+                                               <%=form.label 'Chamber of Commerce', for: 'chamberCommerce'%>
+                                               <%=form.text_field :chamber_commerce, id: 'chamberCommerce', class: "form-control", maxlength: "4", size: "4"%>
                                              </div>
 
                                          </div>
@@ -104,9 +103,8 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group flex-grow-1">
-                                                 <label for="vatNumber" class="">VAT Number</label>
-                                                 <input id="vatNumber" type="number" class="form-control"
-                                                     maxlength="" size="" placeholder="" value="">
+                                               <%=form.label 'VAT Number', for: 'vatNumber'%>
+                                               <%=form.text_field :vat_number, id: 'vatNumber', type: 'number', class: "form-control"%>
                                              </div>
 
                                          </div>
@@ -118,9 +116,8 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="phoneNumber" class="">Phone Number</label>
-                                                 <input id="phoneNumber" type="text" class="form-control"
-                                                     maxlength="" size="" placeholder="" value="">
+                                               <%=form.label 'Phone Number', for: 'phoneNumber'%>
+                                               <%=form.text_field :phone_number, id: 'phoneNumber', type: 'number', class: 'form-control'%>
                                              </div>
 
                                          </div>
@@ -128,9 +125,8 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="email" class="">Email Address</label>
-                                                 <input id="email" type="email" class="form-control"
-                                                     placeholder="email@example.com">
+                                               <%=form.label 'Email Address', for: 'email'%>
+                                               <%=form.text_field :email_address, id: 'email', type: 'email', class: 'form-control', placeholder: 'email@example.com'%>
                                              </div>
 
                                          </div>
@@ -147,9 +143,8 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="address" class="">Address</label>
-                                                 <input id="address" type="text" class="form-control" maxlength="" size=""
-                                                     placeholder="" value="">
+                                               <%=form.label :Address, for: 'mailAddress'%>
+                                               <%=form.text_field :mailing_address, id: 'mailAddress', type: 'text', class: 'form-control'%>
                                              </div>
 
 
@@ -158,18 +153,21 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="#" class="">Building Number & Postal Code</label>
 
                                                  <div class="d-flex flex-row">
-                                                     <input id="buildingNumber" type="text" class="form-control mr-3" maxlength=""
-                                                         size="" placeholder="" value="">
-                                                     <input id="buildingNumber" type="text" class="form-control mr-3" maxlength=""
-                                                         size="" placeholder="" value="">
-                                                     <input id="buildingNumber" type="text" class="form-control" maxlength="" size=""
-                                                         placeholder="" value="">
+                                                   <div class="form-group mr-3">
+                                                     <%=form.label :building_number, for: "mailbuildingNumber"%>
+                                                     <%=form.text_field :mail_building_number, id: 'mailbuildingNumber', type: 'text', class: "form-control mr-3"%>
+                                                   </div>
+
+                                                   <div class="form-group mr-3">
+                                                     <%=form.label :post_code, for: "mailpostCode"%>
+                                                     <%=form.text_field :mail_post_code, id: "mailpostCode", type: 'text', class: "form-control mr-3"%>
+                                                   </div>
+
                                                  </div>
 
-                                         </div>
+                                               </div>
 
                                          </div>
                                          <!-- /.col-md-6 -->
@@ -179,10 +177,10 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="place" class="">Place</label>
-                                                 <input id="place" type="text" class="form-control" maxlength="" size=""
-                                                     placeholder="" value="">
-                                             </div>
+                                               <%=form.label :Place, for: 'mailPlace'%>
+                                               <%=form.text_field :mail_place, id: 'mailPlace', type: 'text', class: 'form-control'%>
+
+                                           </div>
 
 
                                          </div>
@@ -450,10 +448,9 @@
                                                  <!-- /.col -->
                                                  <div class="col">
                                                          <div class="form-group">
-                                                                 <label for="building" class="">Building</label>
-                                                                 <input id="building" type="text" class="form-control" maxlength="" size=""
-                                                                     placeholder="" value="">
-                                                             </div>
+                                                           <%=form.label :Building, for: 'mailBuilding'%>
+                                                           <%=form.text_field :mail_building, id: 'mailBuilding', type: 'text', class: 'form-control'%>
+                                                         </div>
                                                  </div>
                                                  <!-- /.col -->
                                              </div>
@@ -464,49 +461,42 @@
                                      </div>
                                      <!-- /.row -->
 
-
                                      <span class="label mr-4">Use this address for Visiting Address?</span>
                                      <div class="d-flex flex-row">
                                          <div class="form-group custom-control custom-radio mr-2">
-                                             <input type="radio" id="visitingAddressYes" name="visitingAddress" class="custom-control-input" value="Yes" checked>
-                                             <label class="custom-control-label" for="visitingAddressYes">Yes</label>
+                                           <%=form.radio_button :use_this_address_for_visiting?, "Yes", id: 'visitingAddressYes', name: 'visitingAddress', class: 'custom-control-input', checked: true%>
+                                            <%=form.label :yes, class: 'custom-control-label', for: 'visitingAddressYes'%>
                                          </div>
 
                                          <div class="form-group custom-control custom-radio mr-2">
-                                             <input type="radio" id="visitingAddressNo" name="visitingAddress" class="custom-control-input" value="No">
-                                             <label class="custom-control-label" for="visitingAddressNo">No</label>
+                                           <%=form.radio_button :use_this_address_for_visiting?, "No", id: 'visitingAddressNo', name: 'visitingAddress', class: 'custom-control-input', checked: false%>
+                                            <%=form.label :no, class: 'custom-control-label', for: 'visitingAddressNo'%>
                                          </div>
                                      </div>
                                      <!-- /.flex-row -->
-
-
-
                                      <span class="label mr-4">Is billing data required?</span>
                                      <div class="d-flex flex-row">
                                          <div class="form-group custom-control custom-radio mr-2">
-                                             <input type="radio" id="billingDataYes" name="billingData" class="custom-control-input" value="Yes">
-                                             <label class="custom-control-label" for="billingDataYes">Yes</label>
+                                           <%=form.radio_button :is_billing_data_required?, "Yes", id: 'billingDataYes', name: 'billingData', class: 'custom-control-input'%>
+                                            <%=form.label :yes, class: 'custom-control-label', for: 'billingDataYes'%>
                                          </div>
 
                                          <div class="form-group custom-control custom-radio mr-2">
-                                             <input type="radio" id="billingDataNo" name="billingData" class="custom-control-input" value="No" checked>
-                                             <label class="custom-control-label" for="billingDataNo">No</label>
+                                           <%=form.radio_button :is_billing_data_required?, "No", id: 'billingDataNo', name: 'billingData', class: 'custom-control-input', checked: true%>
+                                            <%=form.label :no, class: 'custom-control-label', for: 'billingDataNo'%>
                                          </div>
                                      </div>
                                      <!-- /.flex-row -->
-
-
-
                                      <span class="label mr-4">Use this address for Billing Address?</span>
                                      <div class="d-flex flex-row">
                                          <div class="form-group custom-control custom-radio mr-2">
-                                             <input type="radio" id="billingAddressYes" name="billingAddress" class="custom-control-input" value="Yes" checked>
-                                             <label class="custom-control-label" for="billingAddressYes">Yes</label>
+                                           <%=form.radio_button :use_this_address_for_billing_address?, "Yes", id: 'billingAddressYes', name: 'billingAddress', class: 'custom-control-input', checked: true%>
+                                            <%=form.label :yes, class: 'custom-control-label', for: 'billingAddressYes'%>
                                          </div>
 
                                          <div class="form-group custom-control custom-radio mr-2">
-                                             <input type="radio" id="billingAddressNo" name="billingAddress" class="custom-control-input" value="No">
-                                             <label class="custom-control-label" for="billingAddressNo">No</label>
+                                           <%=form.radio_button :use_this_address_for_billing_address?, "No", id: 'billingAddressNo', name: 'billingAddress', class: 'custom-control-input'%>
+                                           <%=form.label :no, class: 'custom-control-label', for: 'billingAddressNo'%>
                                          </div>
                                      </div>
                                      <!-- /.flex-row -->
@@ -519,31 +509,30 @@
 
                                      <div class="row">
                                          <div class="col-md-6">
-
                                              <div class="form-group">
-                                                 <label for="address" class="">Address</label>
-                                                 <input id="address" type="text" class="form-control" maxlength="" size=""
-                                                     placeholder="" value="">
+                                                  <%=form.label :address, class: 'custom-control-label', for: 'visitAddress'%>
+                                                  <%=form.text_field :visiting_address, id: 'visitAddress', class: 'form-control', type: 'text'%>
                                              </div>
-
 
                                          </div>
                                          <!-- /.col-md-6 -->
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="#" class="">Building Number & Postal Code</label>
 
                                                  <div class="d-flex flex-row">
-                                                     <input id="buildingNumber" type="text" class="form-control mr-3" maxlength=""
-                                                         size="" placeholder="" value="">
-                                                     <input id="buildingNumber" type="text" class="form-control mr-3" maxlength=""
-                                                         size="" placeholder="" value="">
-                                                     <input id="buildingNumber" type="text" class="form-control" maxlength="" size=""
-                                                         placeholder="" value="">
-                                                 </div>
+                                                     <div class="form-group mr-3">
+                                                       <%=form.label :building_number, for: "visitbuildingNumber"%>
+                                                       <%=form.text_field :visit_building_number, id: 'visitbuildingNumber', type: 'text', class: "form-control mr-3"%>
+                                                     </div>
 
-                                         </div>
+                                                     <div class="form-group mr-3">
+                                                       <%=form.label :post_code, for: "visitpostCode"%>
+                                                       <%=form.text_field :mail_post_code, id: "visitpostCode", type: 'text', class: "form-control mr-3"%>
+                                                     </div>
+
+                                                 </div>
+                                               </div>
 
                                          </div>
                                          <!-- /.col-md-6 -->
@@ -553,11 +542,9 @@
                                          <div class="col-md-6">
 
                                              <div class="form-group">
-                                                 <label for="place" class="">Place</label>
-                                                 <input id="place" type="text" class="form-control" maxlength="" size=""
-                                                     placeholder="" value="">
+                                               <%=form.label :place, for: 'visitPlace'%>
+                                               <%=form.text_field :visit_place, id: 'visitPlace', class: 'form-control'%>
                                              </div>
-
 
                                          </div>
                                          <!-- /.col-md-6 -->
@@ -824,10 +811,9 @@
                                                  <!-- /.col -->
                                                  <div class="col">
                                                          <div class="form-group">
-                                                                 <label for="building" class="">Building</label>
-                                                                 <input id="building" type="text" class="form-control" maxlength="" size=""
-                                                                     placeholder="" value="">
-                                                             </div>
+                                                           <%=form.label :building, for: 'visitBuilding'%>
+                                                           <%=form.text_field :visit_building, id: 'visitBuilding', type: 'text', class: 'form-control'%>
+                                                         </div>
                                                  </div>
                                                  <!-- /.col -->
                                              </div>
@@ -847,29 +833,29 @@
                                              <div class="col-md-6">
 
                                                  <div class="form-group">
-                                                     <label for="address" class="">Address</label>
-                                                     <input id="address" type="text" class="form-control" maxlength="" size=""
-                                                         placeholder="" value="">
+                                                   <%=form.label :address, for: 'billAddress'%>
+                                                   <%=form.text_field :billing_address, id: 'billAddress', class: 'form-control'%>
                                                  </div>
-
-
                                              </div>
                                              <!-- /.col-md-6 -->
                                              <div class="col-md-6">
 
                                                  <div class="form-group">
-                                                     <label for="#" class="">Building Number & Postal Code</label>
 
                                                      <div class="d-flex flex-row">
-                                                         <input id="buildingNumber" type="text" class="form-control mr-3" maxlength=""
-                                                             size="" placeholder="" value="">
-                                                         <input id="buildingNumber" type="text" class="form-control mr-3" maxlength=""
-                                                             size="" placeholder="" value="">
-                                                         <input id="buildingNumber" type="text" class="form-control" maxlength="" size=""
-                                                             placeholder="" value="">
+                                                       <div class="form-group mr-3">
+                                                         <%=form.label :building_number, for: "billbuildingNumber"%>
+                                                         <%=form.text_field :bill_building_number, id: 'billbuildingNumber', type: 'text', class: "form-control mr-3"%>
+                                                       </div>
+
+                                                       <div class="form-group mr-3">
+                                                         <%=form.label :post_code, for: "billpostCode"%>
+                                                         <%=form.text_field :bill_post_code, id: "billpostCode", type: 'text', class: "form-control mr-3"%>
+                                                       </div>
+
                                                      </div>
 
-                                             </div>
+                                                   </div>
 
                                              </div>
                                              <!-- /.col-md-6 -->
@@ -879,9 +865,8 @@
                                              <div class="col-md-6">
 
                                                  <div class="form-group">
-                                                     <label for="place" class="">Place</label>
-                                                     <input id="place" type="text" class="form-control" maxlength="" size=""
-                                                         placeholder="" value="">
+                                                   <%=form.label :place, for: "billPlace"%>
+                                                   <%=form.text_field :bill_place, id: 'billPlace'%>
                                                  </div>
 
 
@@ -1198,30 +1183,25 @@
                                        <div class="row">
                                            <div class="col-md-6">
                                                <div class="form-group">
-                                                   <label for="reference" class="">Reference</label>
-                                                   <input id="reference" type="text" class="form-control" maxlength=""
-                                                       size="" placeholder="" value="">
+                                                 <%=form.label :reference, for: 'reference'%>
+                                                 <%=form.text_field :reference, id: 'reference', type: 'text', class: 'form-control'%>
                                                </div>
                                            </div>
                                            <!-- /.col -->
                                            <div class="col-md-6">
                                                <div class="form-group">
-                                                   <label for="Debiteurnr" class="">Debiteurnr</label>
-                                                   <input id="Debiteurnr" type="text" class="form-control" maxlength=""
-                                                       size="" placeholder="" value="">
+                                                 <%=form.label :debiteurnr, for:'Debiteurnr'%>
+                                                 <%=form.text_field :debiteurnr, id: "Debiteurnr", type: 'text', class: 'form-control'%>
                                                </div>
                                            </div>
                                            <!-- /.col -->
                                        </div>
                                        <!-- /.row -->
-
                                        <div class="row">
                                            <div class="col-md-6">
-
                                                <div class="form-group">
-                                                   <label for="invoiceEmail" class="">Invoice Email Address</label>
-                                                   <input id="invoiceEmail" type="email" class="form-control"
-                                                       placeholder="email@example.com">
+                                                 <%=form.label :invoice_email_address, for:'invoiceEmail'%>
+                                                 <%=form.text_field :invoice_email, id: "invoiceEmail", type: 'text', class: 'form-control', placeholder: 'email@example.com'%>
                                                </div>
 
                                            </div>
@@ -1229,11 +1209,6 @@
                                        </div>
                                        <!-- /.row -->
                                    </fieldset>
-
-
-
-
-
 
                                    <div class="row">
                                        <div class="col">
@@ -1245,11 +1220,8 @@
                                    <!-- /.row -->
 
                                    <%end%>
-
-
                            </div>
                            <!-- /.col-md-8 -->
-
 
                            <!-- Right Side help -->
                            <div class="col-md-4 mt-3">
@@ -1277,34 +1249,35 @@
 
 
                <script>
+
                $( document ).ready(function() {
 
-                   $('input[name=visitingAddress]').on('change', function() {
-                       var $radioValue =  $(this).val();
-                       if ($radioValue == "No") {
-                           $('#fsetVisitingAddress').toggle();
-                       } else {
-                           $('#fsetVisitingAddress').toggle();
-                       }
-                   });
-                   $('input[name=billingAddress]').on('change', function() {
-                       var $radioValue =  $(this).val();
-                       if ($radioValue == "No") {
-                           $('#fsetBillingAddress').toggle();
-                       } else {
-                           $('#fsetBillingAddress').toggle();
-                       }
-                   });
-                   $('input[name=billingData]').on('change', function() {
-                       var $radioValue =  $(this).val();
-                       if ($radioValue == "Yes") {
-                           $('#fsetBillingData').toggle();
-                       } else {
-                           $('#fsetBillingData').toggle();
-                       }
-                   });
+                 $('input[name=visitingAddress]').on('change', function() {
+                     var $radioValue =  $(this).val();
+                     if ($radioValue == "No") {
+                         $('#fsetVisitingAddress').toggle();
+                     } else {
+                         $('#fsetVisitingAddress').toggle();
+                     }
+                 });
 
-               });
+                 $('input[name=billingAddress]').on('change', function() {
+                     var $radioValue =  $(this).val();
+                     if ($radioValue == "No") {
+                         $('#fsetBillingAddress').toggle();
+                     } else {
+                         $('#fsetBillingAddress').toggle();
+                     }
+                 });
+                 $('input[name=billingData]').on('change', function() {
+                     var $radioValue =  $(this).val();
+                     if ($radioValue == "Yes") {
+                         $('#fsetBillingData').toggle();
+                     } else {
+                         $('#fsetBillingData').toggle();
+                     }
+                 });
 
+             });
 
-               </script>
+             </script>

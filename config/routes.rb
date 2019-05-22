@@ -34,7 +34,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :organisations
+  resources :organisations, only: [:index, :new, :show, :edit] do
+    member do
+      post :new, action: :create, as: 'create_new'
+      patch :edit, action: :update, as: 'update_edit'
+    end
+    collection do
+      post :index, action: :search, as: 'search_index'
+    end
+  end
 
 
 end
