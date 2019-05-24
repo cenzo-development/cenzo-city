@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   get 'misc/address' => 'misc#check_address'
 
+  get 'organisations/new' => 'organisations#new', as: 'new_organisation'
+  post 'organisations/new' => 'organisations#create', as: 'create_organisation'
+
 
   root to: 'dashboard#index'
 
@@ -34,9 +37,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :organisations, only: [:index, :new, :show, :edit] do
+  resources :organisations, only: [:index, :show, :edit] do
     member do
-      post :new, action: :create, as: 'create_new'
       patch :edit, action: :update, as: 'update_edit'
     end
     collection do

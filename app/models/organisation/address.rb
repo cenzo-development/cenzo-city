@@ -3,8 +3,7 @@ class Organisation::Address
   include Geocoder::Model::Mongoid
 
   field :address
-  field :house_number
-  field :house_number_extension
+  field :building_number
   field :city
   field :country
   field :zipcode
