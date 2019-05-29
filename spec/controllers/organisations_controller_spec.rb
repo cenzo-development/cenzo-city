@@ -17,9 +17,9 @@ RSpec.describe OrganisationsController, type: :controller do
       mail_place: "Purmerend",
       mail_building: '',
       mail_country: "NL",
-      use_address_for_visiting: "yes",
-      billing_required: "no",
-      use_address_for_billing: "yes",
+      visit_address: "yes",
+      billing_data: "no",
+      bill_address: "yes",
       visiting_address: '',
       visit_building_number: '',
       visit_post_code: '',
@@ -28,7 +28,7 @@ RSpec.describe OrganisationsController, type: :controller do
       billing_address: '',
       bill_building_number: '',
       bill_place: '',
-      bill_builing: '',
+      bill_building: '',
       bill_post_code: '',
       bill_country: '',
       invoice_email_address: '',
@@ -45,22 +45,22 @@ RSpec.describe OrganisationsController, type: :controller do
 
   describe 'POST #create' do
     it 'assigns a newly created form as @new_organisation_form' do
-      post :create, params: {:forms_organisation_create => organization_form_data}
+      post :create, params: {:forms_organisation_create => organization_form_data, :commit => "Add Organization"}
       expect(assigns(:forms_organisation_create)).to be_instance_of(Forms::OrganisationCreate)
     end
     context 'when form is valid' do
       it 'assigns newly created organisation as @new_organisation' do
-        post :create, params: {:forms_organisation_create => organization_form_data}
+        post :create, params: {:forms_organisation_create => organization_form_data, :commit => 'Add Organization'}
         expect(assigns(:new_organisation)).to be_instance_of(Organisation)
       end
-    
+
       it 're-directs to newly created organisation page' do
-        post :create, params: {:forms_organisation_create => organization_form_data}
+        post :create, params: {:forms_organisation_create => organization_form_data, :commit => 'Add Organization'}
         org_id = subject.instance_variable_get(:@new_organisation).send(:id)
         expect(response).to redirect_to(organisation_path(org_id))
       end
       context 'when form is invalid' do
-        it 're-renders show template' do
+        it 're-renders new template' do
         end
         it 'signals validation error'
       end

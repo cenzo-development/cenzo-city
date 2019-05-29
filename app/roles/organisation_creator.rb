@@ -1,15 +1,15 @@
 class OrganisationCreator < SimpleDelegator
   def create_org(form, org_mail_address)
-    org_visit_address = case form.use_address_for_visiting
-    when 'yes'
-      org_mail_address.clone
-    when 'no'
+    org_visit_address = case form.visit_address
+    when 'Yes'
+      org_mail_address
+    when 'No'
       create_visit_address(form)
     end
-    org_billing_address = case form.use_address_for_billing
-    when 'yes'
-      org_mail_address.clone
-    when 'no'
+    org_billing_address = case form.bill_address
+    when 'Yes'
+      org_mail_address
+    when 'No'
       create_bill_address(form)
     end
     new_client = persist!(form, org_mail_address, org_visit_address, org_billing_address)
@@ -55,13 +55,13 @@ class OrganisationCreator < SimpleDelegator
         })
       end
     end
-    
+
     def create_visit_address(form)
       Organisation::Address.new({
         address: form.visiting_address,
         building_number: form.visit_building_number,
         zipcode: form.visit_post_code,
-        building: form.visit_building,
+        building_name: form.visit_building,
         country: form.visit_country,
         city: form.visit_place
         })
@@ -72,13 +72,13 @@ class OrganisationCreator < SimpleDelegator
           address: form.visiting_address,
           building_number: form.visit_building_number,
           zipcode: form.visit_post_code,
-          building: form.visit_building,
+          building_name: form.visit_building,
           country: form.visit_country,
           city: form.visit_place
           })
         end
 
         def is_billing_required?(form)
-          form.billing_required == 'yes'
+          form.billing_data == 'Yes'
         end
 end
